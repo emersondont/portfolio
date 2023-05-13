@@ -5,7 +5,7 @@ precision mediump float;
         uniform float u_time;
         uniform vec2 u_mouseCoords;
 
-        vec3 lightPosition = vec3(u_mouseCoords, 5.0);
+        vec3 lightPosition = vec3(u_mouseCoords, 6.0);
         const float lightIntensity = 10.0;
         const float lightAttenuation = 0.5;
         
@@ -53,7 +53,7 @@ precision mediump float;
                 );
                 */
                 float d2 = sphereSDFoptimized(
-                    p + sin(u_time + fi * vec3(52.5126, 64.62744, 632.25)) * vec3(7.0, 3.0, 0.5),
+                    p + sin(u_time + fi * vec3(52.5126, 64.62744, 632.25)) * vec3(7.0, 2.0, 0.5),
                     mix(0.6, 1.4, fract(fi * 412.531 + 0.5124))
                 );
 
@@ -104,7 +104,7 @@ precision mediump float;
         vec3 raymarch(vec3 ro, vec3 rd) {
             float t = 0.0;
             float d = 0.0;
-            vec3 color = vec3(0.0000, 0.0196, 0.0824);
+            vec3 color = vec3(vec3(0.3882, 0.0000, 0.5333) * (1.0-rd.y)*1.5);
             float lightAmount = 0.5;
 
             for (int i = 0; i < 25; i++) {

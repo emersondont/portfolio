@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext } from 'react';
+import { AppContext } from "@/context/appContext";
 
 export default function LanguageSwitch() {
-    const [isEnglish, setIsEnglish] = useState(false);
+    const {isEnglish, setIsEnglish} = useContext(AppContext)
 
     const handleChange = () => {
         setIsEnglish(!isEnglish);

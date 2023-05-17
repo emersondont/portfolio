@@ -2,11 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from "@/context/appContext";
 
 export default function LanguageSwitch() {
-    const {isEnglish, setIsEnglish} = useContext(AppContext)
-
-    const handleChange = () => {
-        setIsEnglish(!isEnglish);
-    };
+    const {isEnglish, setIsEnglish, handleChange} = useContext(AppContext)
 
     return (
         <label className="cursor-pointer text-white font-Rubik font-semibold fixed top-6 right-6 z-30">

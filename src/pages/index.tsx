@@ -1,5 +1,6 @@
 import Background from '../components/backgroundHome'
 import Header from '../components/header'
+import LanguageSwitch from '@/components/languageSwitch'
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 					WEBSITE DEVELOPER
 				</p>
 			</div>
+			<LanguageSwitch />
 		</main>
 	)
 }

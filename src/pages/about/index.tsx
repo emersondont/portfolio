@@ -3,10 +3,10 @@ import Header from '../../components/header'
 
 export default function About() {
 	return (
-		<main className="flex min-h-screen flex-col items-center p-6">
+		<main className="flex min-h-screen flex-col items-center p-6  bg-purple-900">
 			<Header />
 			<div className='flex z-10 w-5/6 mb-6 mt-28'> 
-				<h1 className=' border-b-2 border-purple-400 p-1 font-bold text-4xl'>ABOUT</h1>
+				<h1 className=' border-b-2 border-purple-400 p-1 font-bold text-4xl custom-text-shadow'>ABOUT</h1>
 			</div>
 			<p className='flex z-10 font-Rubik w-5/6 text-lg'>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. commodo sagittis at vel ex. <br />
@@ -23,7 +23,6 @@ export default function About() {
 			 Sed ac semper urna, id lacinia metus. eu efficitur tortor bibendum. <br />
 			</p>
 
-			<Background />
 		</main>
 	)
 }

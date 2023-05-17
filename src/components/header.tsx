@@ -1,10 +1,22 @@
 import MenuItem from "./menuItem"
 
-export default function Header() {
+interface Props {
+    home?: boolean
+}
+
+export default function Header(props: Props) {
     return (
-        <header className='flex z-10'>
+        <header
+            
+            className={
+                props.home ?
+                'fixed z-20 top-0 w-full p-4'
+                :
+                'fixed z-20 top-0 w-full p-4 bg-purple-900'
+            }
+        >
             <nav>
-                <ul className='font-bold text-2xl flex space-x-20'>
+                <ul className='font-bold text-2xl flex space-x-20 justify-center'>
                     <MenuItem href="/">HOME</MenuItem>
                     <MenuItem href="/about">ABOUT</MenuItem>
                     <MenuItem href="/projects">MY PROJECTS</MenuItem>

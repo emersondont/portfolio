@@ -6,6 +6,8 @@ import fragmentShaderSource from './fs'
 export default function Background() {
     const canvasRef = React.createRef<HTMLCanvasElement>();
 
+    //canvasRef.current?.remove()
+
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)

@@ -22,11 +22,11 @@ export default function Home() {
 					isEnglish ?
 						<p className='text-right font-medium text-xl lg:text-2xl md:text-2xl sm:text-2xl'>
 							COMPUTER SCIENCE,<br></br>
-							WEBSITE DEVELOPER
+							FRONTEND DEVELOPER
 						</p> :
 						<p className='text-right font-medium text-xl lg:text-2xl md:text-2xl sm:text-2xl'>
 							CIÊNCIA DA COMPUTAÇÃO,<br></br>
-							DESENVOLVEDOR DE SITE
+							DESENVOLVEDOR FRONTEND
 						</p>
 				}
 			</div>

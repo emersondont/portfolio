@@ -16,7 +16,7 @@ export default function Header(props: Props) {
             }
         >
             <nav>
-                <ul className='font-bold text-xl flex flex-col justify-center 2xl:text-2xl lg:text-2xl md:text-2xl sm:text-xl sm:flex-row sm:space-x-20'>
+                <ul className='font-bold text-2xl flex flex-col justify-center 2xl:text-4xl md:flex-row md:space-x-20'>
                     <MenuItem href="/">HOME</MenuItem>
                     <MenuItem href="/about">ABOUT</MenuItem>
                     <MenuItem href="/projects">MY PROJECTS</MenuItem>

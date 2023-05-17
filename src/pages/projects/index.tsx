@@ -8,7 +8,7 @@ export default function Projects() {
 			<Header />
 			<TitlePage title='MY PROJECTS'/>
 			
-			<div className='grid gap-y-10 w-full justify-items-center justify-evenly 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+			<div className='grid grid-cols-1 gap-y-10 w-full justify-items-center justify-evenly 2xl:grid-cols-4 lg:grid-cols-3'>
 				<Card 
 					title='Color Converter'
 					description='A practical and versatile website for effortlessly converting colors.'

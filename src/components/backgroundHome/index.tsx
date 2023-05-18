@@ -1,12 +1,10 @@
-"use client";
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import vertexShaderSource from './vs'
 import fragmentShaderSource from './fs'
 
 export default function Background() {
     const canvasRef = React.createRef<HTMLCanvasElement>();
-
-    //canvasRef.current?.remove()
+    const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -70,21 +68,47 @@ export default function Background() {
             const rect = canvas.getBoundingClientRect();
             const mouseX = e.clientX - (rect.width / 2);
             const mouseY = e.clientY - (rect.bottom / 2);
-            mouseNormX = mouseX / (canvas.width / ((canvas.width / canvas.height) * zCam)) +1
+            mouseNormX = mouseX / (canvas.width / ((canvas.width / canvas.height) * zCam)) + 1
             mouseNormY = -1 * mouseY / (canvas.height / zCam)
         });
 
         function render() {
-            if(!gl)
+            if (!gl)
                 return
             let elapsedTime = (Date.now() - startTime) / 5000;
             gl.uniform1f(timeUniformLocation, elapsedTime);
             gl.uniform2f(u_mouseCoords, mouseNormX, mouseNormY);
             gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-            requestAnimationFrame(render);
+            //requestAnimationFrame(render);
+            if (canvasIsVisible()) {
+                requestAnimationFrame(render);
+            }
         }
+        //requestAnimationFrame(render);
+        function canvasIsVisible() {
+            if (!canvas || !intersectionObserverRef.current) return false;
+            const { top, bottom } = canvas.getBoundingClientRect();
+            return top < window.innerHeight && bottom > 0;
+        }
+        
+        intersectionObserverRef.current = new IntersectionObserver(
+            (entries) => {
+                const isVisible = entries.some((entry) => entry.isIntersecting);
+                if (isVisible) {
+                    requestAnimationFrame(render);
+                }
+            },
+            { rootMargin: "0px" }
+        );
 
-        requestAnimationFrame(render);
+        intersectionObserverRef.current.observe(canvas);
+
+        return () => {
+            if (intersectionObserverRef.current) {
+                intersectionObserverRef.current.disconnect();
+            }
+        };
+
     }, []);
 
     return (

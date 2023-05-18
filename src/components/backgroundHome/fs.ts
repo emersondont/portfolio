@@ -104,8 +104,7 @@ precision mediump float;
         vec3 raymarch(vec3 ro, vec3 rd) {
             float t = 0.0;
             float d = 0.0;
-            vec3 color = vec3(vec3(0.3882, 0.0000, 0.5333) * (1.0-rd.y)*1.5);
-            float lightAmount = 0.5;
+            vec3 color = vec3(vec3(0.2314, 0.0275, 0.3922) * (1.0-rd.y)*1.5);
 
             for (int i = 0; i < 25; i++) {
                 vec3 p = ro + rd * t;
@@ -113,9 +112,9 @@ precision mediump float;
                 d = sc.w;
                 
                 if (d < 0.01) {
-                    lightAmount = calculateLight(p);
+                    float lightAmount = calculateLight(p);
                     color = sc.xyz;
-                    break;
+                    return color * lightAmount;
                 }
 
                 t += d;
@@ -125,13 +124,18 @@ precision mediump float;
                 }
             }
             
-            return color * lightAmount;
+            return color;
         }
 
         void main() {
             vec2 uv;
-            uv.x = gl_FragCoord.x*(u_resolution.x / u_resolution.y) / u_resolution.x;
-            uv.y = gl_FragCoord.y / u_resolution.y;
+            if(u_resolution.x > u_resolution.y) {
+                uv.x = gl_FragCoord.x*(u_resolution.x / u_resolution.y) / u_resolution.x;
+                uv.y = gl_FragCoord.y / u_resolution.y;
+            } else {
+                uv.x = gl_FragCoord.x / u_resolution.x;
+                uv.y = gl_FragCoord.y / u_resolution.y;
+            }
             const vec3 pointToLookAt = vec3(1.0, 0.5, 1.0);
             const vec3 ro = vec3(0.0, 0.0, 10.0);
             vec3 rd = normalize(vec3(uv, 0.0) - pointToLookAt);

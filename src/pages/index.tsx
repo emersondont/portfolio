@@ -11,6 +11,7 @@ export default function Home() {
 		<main className="flex min-h-screen flex-col items-center p-6 bg-purple-950">
 			<Header home />
 			<LanguageSwitch />
+			<Background />
 
 			<div className='flex z-10 h-full flex-col font-Rubik gap-1 mt-48'>
 				<h1 className='text-purple-400 font-bold text-4xl custom-text-shadow

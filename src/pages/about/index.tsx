@@ -1,4 +1,3 @@
-import Background from '../../components/backgroundAbout'
 import Header from '../../components/header'
 import LanguageSwitch from '@/components/languageSwitch'
 import TitlePage from '@/components/titlePage'

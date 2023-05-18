@@ -1,10 +1,10 @@
-"use client";
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import vertexShaderSource from './vs'
 import fragmentShaderSource from './fs'
 
 export default function Background() {
     const canvasRef = React.createRef<HTMLCanvasElement>();
+    const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -61,15 +61,41 @@ export default function Background() {
         const startTime = Date.now();
 
         function render() {
-            if(!gl)
+            if (!gl)
                 return
             let elapsedTime = (Date.now() - startTime) / 1000;
             gl.uniform1f(timeUniformLocation, elapsedTime);
             gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-            requestAnimationFrame(render);
+            //requestAnimationFrame(render);
+            if (canvasIsVisible()) {
+                requestAnimationFrame(render);
+            }
         }
 
-        requestAnimationFrame(render);
+        //requestAnimationFrame(render);
+        function canvasIsVisible() {
+            if (!canvas || !intersectionObserverRef.current) return false;
+            const { top, bottom } = canvas.getBoundingClientRect();
+            return top < window.innerHeight && bottom > 0;
+        }
+
+        intersectionObserverRef.current = new IntersectionObserver(
+            (entries) => {
+                const isVisible = entries.some((entry) => entry.isIntersecting);
+                if (isVisible) {
+                    requestAnimationFrame(render);
+                }
+            },
+            { rootMargin: "0px" }
+        );
+
+        intersectionObserverRef.current.observe(canvas);
+
+        return () => {
+            if (intersectionObserverRef.current) {
+                intersectionObserverRef.current.disconnect();
+            }
+        };
     }, []);
 
     return (

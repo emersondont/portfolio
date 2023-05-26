@@ -72,25 +72,34 @@ export default function Background() {
             mouseNormY = -1 * mouseY / (canvas.height / zCam)
         });
 
-        function render() {
+        var desiredFPS = 30;
+        var lastFrame = 0;
+        var range = 1000 / desiredFPS;
+
+        function render(now: number) {
             if (!gl)
                 return
-            let elapsedTime = (Date.now() - startTime) / 5000;
-            gl.uniform1f(timeUniformLocation, elapsedTime);
-            gl.uniform2f(u_mouseCoords, mouseNormX, mouseNormY);
-            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-            //requestAnimationFrame(render);
             if (canvasIsVisible()) {
+                var elapsed = now - lastFrame;
+
+                if (elapsed > range) {
+                    lastFrame = now - (elapsed % range);
+
+                    let elapsedTime = (Date.now() - startTime) / 5000;
+                    gl.uniform1f(timeUniformLocation, elapsedTime);
+                    gl.uniform2f(u_mouseCoords, mouseNormX, mouseNormY);
+                    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                }
                 requestAnimationFrame(render);
             }
         }
-        //requestAnimationFrame(render);
+
         function canvasIsVisible() {
             if (!canvas || !intersectionObserverRef.current) return false;
             const { top, bottom } = canvas.getBoundingClientRect();
             return top < window.innerHeight && bottom > 0;
         }
-        
+
         intersectionObserverRef.current = new IntersectionObserver(
             (entries) => {
                 const isVisible = entries.some((entry) => entry.isIntersecting);

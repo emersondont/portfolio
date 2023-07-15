@@ -15,7 +15,7 @@ export default function Header(props: Props) {
                 props.home ?
                     'fixed z-20 top-0 w-full p-4'
                     :
-                    'fixed z-20 top-0 w-full p-4 bg-purple-950'
+                    'fixed z-20 top-0 w-full p-4 bg-background'
             }
         >
             <nav>

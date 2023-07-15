@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import vertexShaderSource from './vs'
 import fragmentShaderSource from './fs'
 
-export default function Background() {
+export default function BackgroundHome() {
     const canvasRef = React.createRef<HTMLCanvasElement>();
     const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
 

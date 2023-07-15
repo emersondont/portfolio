@@ -90,9 +90,7 @@ precision mediump float;
         vec3 raymarch(vec3 ro, vec3 rd) {
             float t = 0.0;
             float d = 0.0;
-            // vec3 color = vec3(vec3(0.0510, 0.0392, 0.1725) * (1.0-rd.y)*1.5);
-            vec3 color = vec3(0.2667, 0.0000, 0.3961);
-            // vec3 color = vec3(0.1412, 0.0431, 0.2549);
+            vec3 color = vec3(0.2235, 0.1490, 0.3412);
 
             for (int i = 0; i < 5; i++) {
                 vec3 p = ro + rd * t;

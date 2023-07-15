@@ -15,7 +15,7 @@ export default function Card(props: Props) {
                 <Image
                     src={props.img}
                     width={300}
-                    height={300}
+                    height={200}
                     alt={`Screenshot of website ${props.title}`}
                     className="rounded-lg drop-shadow-lg cursor-pointer"
                 />

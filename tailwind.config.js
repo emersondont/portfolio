@@ -8,7 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Rubik': ['Rubik', 'sans-serif']
+        'Roboto': ['Roboto', 'sans-serif']
+      },
+      colors: {
+        textPrimary: '#ffffff',
+        primary: '#a178b9',
+        secundary: '#502d55',
+        background: '#392657'
       }
     },
   },

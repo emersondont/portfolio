@@ -19,7 +19,7 @@ export default function Card(props: Props) {
                     alt={`Screenshot of website ${props.title}`}
                     className="rounded-lg drop-shadow-lg cursor-pointer"
                 />
-                <h1 className="text-xl font-bold text-center custom-text-shadow border-b-2 border-purple-400">
+                <h1 className="text-xl font-bold text-center custom-text-shadow border-b-2 border-purple-700">
                     {props.title}
                 </h1>
             </Link>

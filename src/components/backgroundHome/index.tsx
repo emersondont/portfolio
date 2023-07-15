@@ -123,7 +123,7 @@ export default function Background() {
     return (
         <canvas
             ref={canvasRef}
-            className='absolute bottom-0 right-0 z-0 w-full h-full bg-bgCanvas'
+            className='absolute bottom-0 right-0 z-0 w-full h-full blur-2xl'
         />
     )
 

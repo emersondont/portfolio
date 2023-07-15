@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 const cookieExists = Cookies.get('language') !== undefined;
 if (!cookieExists) {
-	Cookies.set('language', 'en', { sameSite: 'strict' });
+	Cookies.set('language', 'pt-br', { sameSite: 'strict' });
 }
 
 interface AppContextType {
@@ -13,7 +13,7 @@ interface AppContextType {
 }
 
 const initialContext: AppContextType = {
-	isEnglish: true,
+	isEnglish: false,
 	setIsEnglish: () => { },
 	handleChange: () => { }
 };

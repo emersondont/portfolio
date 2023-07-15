@@ -14,7 +14,7 @@ export default function Home() {
 			<Background />
 
 			<div className='flex z-10 h-full flex-col font-Rubik gap-1 mt-48'>
-				<h1 className='text-purple-400 font-bold text-4xl custom-text-shadow
+				<h1 className='text-purple-600 font-bold text-4xl custom-text-shadow
 				lg:text-8xl md:text-6xl sm:text-6xl sm:tracking-widest
 				'>
 					EMERSONDONT

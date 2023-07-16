@@ -68,7 +68,7 @@ export default function About() {
 									width={420}
 									height={220}
 									alt={`Screenshot of website`}
-									className="rounded-lg drop-shadow-lg cursor-pointer"
+									className="rounded-lg drop-shadow-lg cursor-pointer hidden lg:block"
 								/>
 							</div>
 							<p>
@@ -88,7 +88,7 @@ export default function About() {
 							</p>
 						</div>
 				}
-				<div className='text-primary flex w-full justify-center gap-8 mt-8 mb-8'>
+				<div className='text-primary flex w-full justify-center gap-8 mt-8 mb-8 flex-wrap'>
 					<SiHtml5 size={42}/>
 					<SiCss3 size={42}/>
 					<SiTailwindcss size={42}/>

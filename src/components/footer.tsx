@@ -5,7 +5,7 @@ import {
 } from 'react-icons/si';
 export default function Footer() {
 	return (
-		<footer className='flex gap-4'>
+		<footer className='flex gap-4 justify-center flex-wrap'>
 			<div className='flex flex-col items-center border-2 rounded-lg border-primary py-4 px-2'>
 				<SiGithub size={32} className='text-primary'/>
 				<h2 className='text-primary'>GitHub</h2>

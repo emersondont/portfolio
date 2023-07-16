@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import Header from './header'
 import Footer from './footer';
-import LanguageSwitch from './languageSwitch'
 import BackgroundHome from './backgroundHome'
 
 interface Props {

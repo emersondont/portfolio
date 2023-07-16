@@ -12,7 +12,7 @@ interface Props {
 
 export default function Card(props: Props) {
     return (
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 w-80">
             <Link href={props.href} target="_blank" className='hover:text-primary'>
                 <Image
                     src={props.img}

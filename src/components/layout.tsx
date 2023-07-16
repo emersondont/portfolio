@@ -15,7 +15,7 @@ export default function Layout(props: Props) {
         <div className="flex min-h-screen flex-col items-center p-20  bg-background">
             <Header home={props.home} />
             {props.home && <BackgroundHome />}
-            <LanguageSwitch />
+            {/* <LanguageSwitch /> */}
             {props.children}
             <Footer />
         </div>

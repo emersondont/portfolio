@@ -1,17 +1,19 @@
 import Image from "next/image"
 import Link from 'next/link'
+import { SiGithub } from 'react-icons/si';
 
 interface Props {
     title: string
     description: string
     href: string
+    github: string
     img: string
 }
 
 export default function Card(props: Props) {
     return (
         <div className="flex flex-col items-center gap-2">
-            <Link href={props.href}>
+            <Link href={props.href} target="_blank" className='hover:text-primary'>
                 <Image
                     src={props.img}
                     width={300}
@@ -23,10 +25,13 @@ export default function Card(props: Props) {
                     {props.title}
                 </h1>
             </Link>
+            <Link href={props.github} target="_blank" className="flex items-center gap-2 hover:text-primary">
+                <SiGithub size={24} />
+                <p>Acessar o projeto no GitHub</p>
+            </Link>
             <p className="text-center w-2/3">
                 {props.description}
             </p>
         </div>
     )
 }
-//between RGB, HEX, HSL, CMYK, and HSV.

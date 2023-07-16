@@ -12,8 +12,6 @@ import {
 	SiTypescript,
 	SiReact,
 	SiNextdotjs,
-	SiPython,
-
 } from 'react-icons/si';
 
 export default function About() {
@@ -90,7 +88,7 @@ export default function About() {
 							</p>
 						</div>
 				}
-				<div className='text-primary flex w-full justify-center gap-8 mt-8'>
+				<div className='text-primary flex w-full justify-center gap-8 mt-8 mb-8'>
 					<SiHtml5 size={42}/>
 					<SiCss3 size={42}/>
 					<SiTailwindcss size={42}/>

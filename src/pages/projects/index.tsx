@@ -1,5 +1,3 @@
-import Header from '../../components/header'
-import LanguageSwitch from '@/components/languageSwitch'
 import Card from '@/components/card'
 import TitlePage from '@/components/titlePage'
 import { useContext } from 'react';
@@ -41,18 +39,21 @@ export default function Projects() {
 								title='Color Converter'
 								description='Um site prático e versátil para converter cores sem esforço.'
 								href='https://color-converter-one.vercel.app/'
+								github='https://github.com/emersondont/color-converter'
 								img='/img/Color-converter.png'
 							/>
 							<Card
 								title='Minecraft 3D store'
 								description='Uma loja de objetos 3D onde os usuários podem explorar e adquirir modelos tridimensionais de maneira intuitiva.'
 								href='https://minecraft-3d-store.vercel.app/'
+								github='https://github.com/emersondont/Trabalho-CG'
 								img='/img/Minecraft-3d-store.png'
 							/>
 							<Card
 								title='Ray Marching'
 								description='Minha implementação de Ray Marching.'
 								href='https://ray-marching-xi.vercel.app/'
+								github='https://github.com/emersondont/Trabalho2-CG'
 								img='/img/Ray-marching.png'
 							/>
 						</div>

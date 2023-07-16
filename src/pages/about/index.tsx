@@ -5,10 +5,10 @@ import { AppContext } from "@/context/appContext";
 import Layout from '@/components/layout';
 import Image from 'next/image';
 import {
-	SiCss3, 
-	SiTailwindcss, 
-	SiHtml5, 
-	SiJavascript, 
+	SiCss3,
+	SiTailwindcss,
+	SiHtml5,
+	SiJavascript,
 	SiTypescript,
 	SiReact,
 	SiNextdotjs,
@@ -50,7 +50,7 @@ export default function About() {
 								Feel free to explore my portfolio and learn more about the <Link href={'/projects'}><span className='text-purple-300'>projects</span></Link> I have worked on!
 							</p>
 						</div> :
-						<div className='flex flex-col z-10 text-lg gap-4'>
+						<div className='flex flex-col z-10 text-base sm:text-lg gap-4'>
 							<div className='flex w-full'>
 								<div className='flex flex-col gap-4'>
 									<p>
@@ -89,13 +89,13 @@ export default function About() {
 						</div>
 				}
 				<div className='text-primary flex w-full justify-center gap-8 mt-8 mb-8 flex-wrap'>
-					<SiHtml5 size={42}/>
-					<SiCss3 size={42}/>
-					<SiTailwindcss size={42}/>
-					<SiJavascript size={42}/>
-					<SiTypescript size={42}/>
-					<SiReact size={42}/>
-					<SiNextdotjs size={42}/>
+					<SiHtml5 size={32} />
+					<SiCss3 size={32} />
+					<SiTailwindcss size={32} />
+					<SiJavascript size={32} />
+					<SiTypescript size={32} />
+					<SiReact size={32} />
+					<SiNextdotjs size={32} />
 				</div>
 
 			</main>

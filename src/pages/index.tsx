@@ -7,7 +7,7 @@ export default function Home() {
 
 	return (
 		<Layout home>
-			<main className="flex min-h-screen flex-col items-center p-6 bg-transparent">
+			<main className="flex flex-col items-center p-6 bg-transparent">
 
 				<div className='flex z-10 h-full flex-col font-Rubik gap-1 mt-40'>
 					<h1 className='text-primary font-bold text-4xl custom-text-shadow

@@ -21,12 +21,12 @@ export default function Header(props: Props) {
             <nav>
                 {
                     isEnglish ?
-                        <ul className='font-bold text-2xl flex flex-col justify-center 2xl:text-4xl md:flex-row md:space-x-20 px-8'>
+                        <ul className='font-bold text-2xl flex flex-col justify-center 2xl:text-4xl md:flex-row md:space-x-20'>
                             <MenuItem href="/">HOME</MenuItem>
                             <MenuItem href="/about">ABOUT</MenuItem>
                             <MenuItem href="/projects">MY PROJECTS</MenuItem>
                         </ul> :
-                        <ul className='font-bold text-2xl flex justify-center flex-col 2xl:text-4xl md:flex-row md:space-x-20 px-8'>
+                        <ul className='font-bold text-2xl flex justify-center flex-col 2xl:text-4xl md:flex-row md:space-x-20'>
                             <MenuItem href="/">INÍCIO</MenuItem>
                             <MenuItem href="/about">SOBRE</MenuItem>
                             <MenuItem href="/projects">MEUS PROJETOS</MenuItem>

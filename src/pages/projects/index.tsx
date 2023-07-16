@@ -19,18 +19,21 @@ export default function Projects() {
 								title='Color Converter'
 								description='A practical and versatile website for effortlessly converting colors.'
 								href='https://color-converter-one.vercel.app/'
+								github='https://github.com/emersondont/color-converter'
 								img='/img/Color-converter.png'
 							/>
 							<Card
 								title='Minecraft 3D store'
 								description='A 3D object store where users can explore and acquire three-dimensional models in an intuitive manner.'
 								href='https://minecraft-3d-store.vercel.app/'
+								github='https://github.com/emersondont/Trabalho-CG'
 								img='/img/Minecraft-3d-store.png'
 							/>
 							<Card
 								title='Ray Marching'
 								description='My implementation of Ray Marching.'
 								href='https://ray-marching-xi.vercel.app/'
+								github='https://github.com/emersondont/Trabalho2-CG'
 								img='/img/Ray-marching.png'
 							/>
 						</div> :

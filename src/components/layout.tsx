@@ -11,7 +11,7 @@ interface Props {
 
 export default function Layout(props: Props) {
     return (
-        <div className="flex min-h-screen flex-col items-center px-8 pb-10 pt-40 md:py-20 md:pb-20 bg-background justify-between">
+        <div className="flex min-h-screen flex-col items-center px-8 pb-20 pt-40 md:py-20 md:pb-20 bg-background justify-between">
             <Header home={props.home} />
             {props.home && <BackgroundHome />}
             {/* <LanguageSwitch /> */}

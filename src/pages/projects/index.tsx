@@ -14,6 +14,12 @@ export default function Projects() {
 
 				<div className='flex gap-x-20 gap-y-10 w-full justify-center flex-wrap'>
 					<Card
+						title='Império Suplementos'
+						description='Plataforma para exibir produtos de uma loja de suplementos.'
+						href='https://imperiosuplementos.vercel.app/'
+						img='/img/Imperio-suplementos.png'
+					/>
+					<Card
 						title='PET Computação'
 						description='Reformulação do portal do PET Computação - UFPel'
 						href='https://wp.ufpel.edu.br/petcomp/'

@@ -2,16 +2,16 @@ import MenuItem from "./menuItem";
 
 const menuOptions = [
 	{
-		label: "INÍCIO",
-		href: "/",
-	},
-	{
 		label: "SOBRE",
 		href: "/about",
 	},
 	{
-		label: "MEUS PROJETOS",
+		label: "PROJETOS",
 		href: "/projects",
+	},
+	{
+		label: "EXPERIÊNCIA",
+		href: "/experience",
 	},
 ];
 

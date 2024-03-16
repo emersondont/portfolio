@@ -1,4 +1,5 @@
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link } from 'react-scroll';
 import { useContext, useState, useEffect } from 'react';
 import { MenuContext } from "@/context/menuContext";
 
@@ -30,11 +31,11 @@ export default function MenuItem(props: Props) {
 	}, [selected])
 
 	return (
-		<li className='cursor-pointer group'
-			onClick={handleClicked}
-		>
-			<Link href={props.href}
+		<li className='cursor-pointer group'>
+			<Link 
+				to={props.href}
 				className='ease-in duration-200 p-1 flex items-center gap-4'
+				onClick={handleClicked}
 			>
 				<span style={{ height: '1px' }}
 					className={`ease-in duration-200 

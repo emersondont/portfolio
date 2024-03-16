@@ -7,10 +7,10 @@ export default function Home() {
 
 	return (
 		<Layout home>
-			<main className="flex z-10 flex-col gap-1 mt-32">
+			<main className="flex z-10 flex-col gap-1">
 
 				<h1 className='text-primary font-bold text-4xl custom-text-shadow
-				lg:text-8xl md:text-6xl sm:text-6xl sm:tracking-widest
+				lg:text-6xl md:text-4xl sm:text-4xl sm:tracking-widest
 				'>
 					EMERSONDONT
 				</h1>

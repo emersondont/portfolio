@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
-import Header from './header'
-import Footer from './footer';
+import Menu from './menu'
+import Links from './links';
+import Emersondont from './emersondont';
 import BackgroundHome from './backgroundHome'
-// import LanguageSwitch from './languageSwitch';
+
 
 interface Props {
     children: ReactNode
@@ -11,12 +12,16 @@ interface Props {
 
 export default function Layout(props: Props) {
     return (
-        <div className="flex min-h-screen flex-col items-center px-8 pb-20 pt-40 md:py-20 md:pb-20 bg-background justify-between">
-            <Header home={props.home} />
-            {props.home && <BackgroundHome />}
+        <main className="flex items-center bg-background font-Inter min-h-screen w-full z-20">
+            {/* <BackgroundHome /> */}
             {/* <LanguageSwitch /> */}
-            {props.children}
-            <Footer />
-        </div>
+            <section className='z-20 flex flex-col w-1/2 p-24 justify-between h-screen'>
+                <Emersondont />
+                <Menu />
+                <Links />
+            </section>
+            {/* {props.children} */}
+
+        </main>
     )
 }

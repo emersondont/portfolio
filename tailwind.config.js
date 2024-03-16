@@ -8,13 +8,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Roboto': ['Roboto', 'sans-serif']
+        'Inter': ['Inter', 'sans-serif']
       },
       colors: {
-        textPrimary: '#ffffff',
-        primary: '#a178b9',
-        secundary: '#502d55',
-        background: '#392657'
+        primary: '#E2E8F0',
+        secondary: '#a178b9',
+        background: '#392657',
+        // secondary: '#502d55',
+        blur: 'rgba(255,255,255,0.05)',
       }
     },
   },

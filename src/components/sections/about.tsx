@@ -1,6 +1,4 @@
-import Link from 'next/link'
-import { Element } from 'react-scroll';
-
+import React, { useRef } from 'react';
 import {
 	SiCss3,
 	SiTailwindcss,
@@ -11,11 +9,19 @@ import {
 	SiNextdotjs,
 } from 'react-icons/si';
 
-export default function About() {
-	// const { isEnglish } = useContext(AppContext)
+interface Props {
+	id: string;
+}
+
+export default function About(props: Props) {
+	const aboutRef = useRef<HTMLDivElement>(null);
 
 	return (
-		<Element name='/about' className="flex flex-col mt-24 gap-6">
+		<div
+			id={props.id}
+			className="flex flex-col mt-24 gap-6 min-h-full"
+			ref={aboutRef}
+		>
 			<div className='flex flex-col z-10 text-base text-primary gap-3'>
 				<p>
 					Olá! Sou o Emerson, formado em <span className='text-secondary'>Ciência da Computação</span> pela
@@ -36,7 +42,7 @@ export default function About() {
 					onde adquiri conhecimento prático no desenvolvimento de aplicações frontend modernas.
 				</p>
 				<p>
-					Atualmente, estou expandindo meu conjunto de habilidades explorando <span className='text-secondary'>TypeScript, Tailwind</span>
+					Atualmente, estou expandindo meu conjunto de habilidades explorando <span className='text-secondary'>TypeScript, Tailwind </span>
 					e também o <span className='text-secondary'>Next.js</span>.
 				</p>
 				<p>
@@ -53,6 +59,6 @@ export default function About() {
 				<SiReact size={28} />
 				<SiNextdotjs size={28} />
 			</div>
-		</Element>
+		</div>
 	)
 }

@@ -6,7 +6,7 @@ interface MenuContextType {
 }
 
 const initialContext: MenuContextType = {
-	selected: '/',
+	selected: 'about',
 	setSelected: () => { },
 };
 

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import {
 	SiGithub,
-	SiLinkedin
+	SiLinkedin,
+	SiInstagram
 } from 'react-icons/si';
 
 const links = [
@@ -14,6 +15,11 @@ const links = [
 		label: 'LinkedIn',
 		href: 'https://www.linkedin.com/in/emersondont/',
 		icon: SiLinkedin
+	},
+	{
+		label: 'Instagram',
+		href: 'https://www.instagram.com/emersondont/',
+		icon: SiInstagram
 	}
 ]
 
@@ -28,9 +34,9 @@ export default function Links() {
 					className='flex items-center gap-3 group'
 				>
 					<link.icon size={28} className='text-secondary group-hover:text-primary ease-in duration-200' />
-					<span className='text-sm font-medium text-secondary group-hover:text-primary ease-in duration-200'>
+					{/* <span className='text-sm font-medium text-secondary group-hover:text-primary ease-in duration-200'>
 						{link.label}
-					</span>
+					</span> */}
 				</Link>
 			))}
 		</footer>

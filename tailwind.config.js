@@ -14,7 +14,6 @@ module.exports = {
         primary: '#E2E8F0',
         secondary: '#a178b9',
         background: '#392657',
-        // secondary: '#502d55',
         blur: 'rgba(255,255,255,0.05)',
       }
     },

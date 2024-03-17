@@ -1,32 +1,17 @@
 import MenuItem from "./menuItem";
-
-const menuOptions = [
-	{
-		label: "SOBRE",
-		href: "/about",
-	},
-	{
-		label: "PROJETOS",
-		href: "/projects",
-	},
-	{
-		label: "EXPERIÊNCIA",
-		href: "/experience",
-	},
-];
-
+import { sections } from '../pages/index';
 
 export default function Menu() {
 	return (
 		<nav className="flex">
 			<ul className='flex justify-center flex-col'>
-				{menuOptions.map(menu => {
+				{sections.map(section => {
 					return (
 						<MenuItem
-							key={menu.href}
-							href={menu.href}
+							key={section.id}
+							id={section.id}
 						>
-							{menu.label}
+							{section.label}
 						</MenuItem>
 					)
 				})}

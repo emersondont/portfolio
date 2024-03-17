@@ -1,31 +1,41 @@
 import Image from "next/image"
 import Link from 'next/link'
+import { IconType } from "react-icons"
 
 interface Props {
-    title: string
-    description: string
-    href: string
-    img: string
+	title: string
+	description: string
+	href: string
+	img: string
+	techs: IconType[]
 }
 
 export default function Card(props: Props) {
-    return (
-        <div className="flex flex-col items-center gap-2 w-80">
-            <Link href={props.href} target="_blank" className='hover:text-primary ease-in duration-100'>
-                <Image
-                    src={props.img}
-                    width={300}
-                    height={200}
-                    alt={`Screenshot of website ${props.title}`}
-                    className="rounded-lg drop-shadow-lg cursor-pointer"
-                />
-                <h1 className="text-xl font-bold text-center custom-text-shadow border-b-2 border-purple-700">
-                    {props.title}
-                </h1>
-            </Link>
-            <p className="text-center w-2/3">
-                {props.description}
-            </p>
-        </div>
-    )
+	return (
+		<Link
+			href={props.href}
+			target="_blank"
+			className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start
+			hover:bg-blur z-10 border border-transparent hover:border-blur backdrop-blur-lg '
+		>
+			<img
+				src={props.img}
+				alt={`Screenshot of website ${props.title}`}
+				className="w-40 h-auto object-contain"
+			/>
+			<div className="flex flex-col">
+				<h1 className="text-base font-semibold text-primary mb-2">
+					{props.title}
+				</h1>
+				<p className="text-base text-secondary">
+					{props.description}
+				</p>
+				<div className="text-secondary flex gap-3 mt-4">
+					{props.techs.map((Tech, index) => (
+						<Tech key={index} size={22} />
+					))}
+				</div>
+			</div>
+		</Link>
+	)
 }

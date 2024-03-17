@@ -1,11 +1,9 @@
-// import Link from 'next/link'
-import { Link } from 'react-scroll';
 import { useContext, useState, useEffect } from 'react';
 import { MenuContext } from "@/context/menuContext";
 
 interface Props {
 	children: string
-	href: string
+	id: string
 }
 
 const designOptions = [
@@ -18,10 +16,21 @@ export default function MenuItem(props: Props) {
 	const [selectedColor, setSelectedColor] = useState<string>(designOptions[1].color)
 	const [selectedWidth, setSelectedWidth] = useState<string>(designOptions[1].width)
 
-	const handleClicked = () => setSelected(props.href)
+	const scrollToDiv = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
+
+	const handleClicked = () => {
+		scrollToDiv(props.id)
+		setSelected(props.id)
+	}
+
 
 	useEffect(() => {
-		if (selected === props.href) {
+		if (selected === props.id) {
 			setSelectedColor(designOptions[1].color)
 			setSelectedWidth(designOptions[1].width)
 		} else {
@@ -31,23 +40,19 @@ export default function MenuItem(props: Props) {
 	}, [selected])
 
 	return (
-		<li className='cursor-pointer group'>
-			<Link 
-				to={props.href}
-				className='ease-in duration-200 p-1 flex items-center gap-4'
-				onClick={handleClicked}
-			>
-				<span style={{ height: '1px' }}
-					className={`ease-in duration-200 
+		<li className='cursor-pointer group p-1 flex items-center gap-4'
+			onClick={handleClicked}
+		>
+			<span style={{ height: '1px' }}
+				className={`ease-in duration-200 
 					bg-${selectedColor} w-${selectedWidth} 
 					group-hover:w-${designOptions[1].width}
 					group-hover:bg-${designOptions[1].color}
 					`}
-				/>
-				<span className={`text-sm font-semibold text-${selectedColor} group-hover:text-${designOptions[1].color}`}>
-					{props.children}
-				</span>
-			</Link>
+			/>
+			<span className={`ease-in duration-200 text-sm font-semibold text-${selectedColor} group-hover:text-${designOptions[1].color}`}>
+				{props.children}
+			</span>
 		</li>
 	)
 }

@@ -1,22 +1,72 @@
-import React, { ReactNode } from 'react';
-import Header from './header'
-import Footer from './footer';
+import React, { ReactNode, useEffect, useContext, useRef } from 'react';
+import { MenuContext } from "@/context/menuContext";
+import Menu from './menu'
+import Links from './links';
+import Emersondont from './emersondont';
+import { sections } from '../pages/index';
 import BackgroundHome from './backgroundHome'
-// import LanguageSwitch from './languageSwitch';
 
 interface Props {
-    children: ReactNode
-    home?: boolean
+	children: ReactNode
 }
 
 export default function Layout(props: Props) {
-    return (
-        <div className="flex min-h-screen flex-col items-center px-8 pb-20 pt-40 md:py-20 md:pb-20 bg-background justify-between">
-            <Header home={props.home} />
-            {props.home && <BackgroundHome />}
-            {/* <LanguageSwitch /> */}
-            {props.children}
-            <Footer />
-        </div>
-    )
+	const { setSelected } = useContext(MenuContext)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setSelected(entry.target.id);
+					}
+				});
+			},
+			{
+				root: null,
+				rootMargin: '10px',
+				threshold: 0.5,
+			}
+		);
+
+		sections.forEach(({ id }) => {
+			const sectionRef = document.getElementById(id);
+			if (sectionRef) {
+				observer.observe(sectionRef);
+			}
+		});
+
+		return () => {
+			observer.disconnect();
+		};
+
+	}, [setSelected]);
+
+	return (
+		<main className="
+		flex flex-col items-center bg-background font-Inter h-screen w-full
+		md:flex-row
+		">
+			{/* <BackgroundHome /> */}
+			<section className='
+			py-6 px-6 z-20 flex flex-wrap justify-between gap-4 w-full
+			lg:pl-24
+			md:flex-col md:h-screen md:py-24 md:pl-16 md:flex-nowrap md:w-1/2
+			sm:px-8
+			'>
+				<Emersondont />
+				<Menu />
+				<Links />
+			</section>
+			<section style={{ scrollBehavior: 'smooth' }}
+				className='
+				px-6 overflow-y-auto h-full z-20
+				lg:pr-24
+				md:pr-16 md:w-1/2
+				sm:px-8
+			'>
+				{props.children}
+			</section>
+		</main>
+	)
 }

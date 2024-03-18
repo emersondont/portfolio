@@ -39,7 +39,10 @@ export default function MenuItem(props: Props) {
 	}, [selected])
 
 	return (
-		<li className='cursor-pointer group p-1 flex items-center gap-4'
+		<li className={`cursor-pointer group p-1 items-center gap-4
+		${selected === props.id ? 'flex': 'hidden'}
+		md:flex
+		`}
 			onClick={handleClicked}
 		>
 			<span style={{ height: '1px' }}

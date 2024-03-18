@@ -24,7 +24,10 @@ export default function Experience(props: Props) {
 	return (
 		<div
 			id={props.id}
-			className="flex flex-col gap-3 pt-24 min-h-screen"
+			className="
+				flex flex-col gap-3 pt-40 min-h-screen
+				sm:pt-24
+			"
 			ref={experienceRef}
 		>
 			{experiences.map((experience, index) => (
@@ -34,9 +37,12 @@ export default function Experience(props: Props) {
 					key={index}
 					className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
 				hover:bg-blur z-10 border border-transparent hover:border-blur hover:backdrop-blur-lg 
+						flex-wrap
+						sm:flex-nowrap
 				'
 				>
-					<div className='text-xs font-semibold flex items-center gap-1 text-secondary'>
+					<div className='
+						text-xs font-semibold flex items-center gap-1 text-secondary'>
 						<span>{experience.start}</span>
 						<span className='w-4 bg-secondary' style={{ height: '2px' }} />
 						<span>{experience.end}</span>

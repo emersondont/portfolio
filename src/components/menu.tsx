@@ -3,7 +3,7 @@ import { sections } from '../pages/index';
 
 export default function Menu() {
 	return (
-		<nav className="flex">
+		<nav className="flex order-last md:order-none w-full">
 			<ul className='flex justify-center flex-col'>
 				{sections.map(section => {
 					return (

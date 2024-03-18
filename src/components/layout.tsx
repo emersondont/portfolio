@@ -43,14 +43,28 @@ export default function Layout(props: Props) {
 	}, [setSelected]);
 
 	return (
-		<main className="flex items-center bg-background font-Inter h-screen w-full">
+		<main className="
+		flex flex-col items-center bg-background font-Inter h-screen w-full
+		md:flex-row
+		">
 			{/* <BackgroundHome /> */}
-			<section className='z-20 flex flex-col w-1/2 p-24 justify-between h-screen'>
+			<section className='
+			py-6 px-6 z-20 flex flex-wrap justify-between gap-4 w-full
+			lg:pl-24
+			md:flex-col md:h-screen md:py-24 md:pl-16 md:flex-nowrap md:w-1/2
+			sm:px-8
+			'>
 				<Emersondont />
 				<Menu />
 				<Links />
 			</section>
-			<section className='w-1/2 overflow-y-auto h-full pr-24 z-20' style={{ scrollBehavior: 'smooth' }}>
+			<section style={{ scrollBehavior: 'smooth' }}
+				className='
+				px-6 overflow-y-auto h-full z-20
+				lg:pr-24
+				md:pr-16 md:w-1/2
+				sm:px-8
+			'>
 				{props.children}
 			</section>
 		</main>

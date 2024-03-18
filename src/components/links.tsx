@@ -25,18 +25,18 @@ const links = [
 
 export default function Links() {
 	return (
-		<footer className='flex gap-4'>
+		<footer className='flex gap-2 sm:gap-4'>
 			{links.map((link, index) => (
 				<Link
 					key={index}
 					href={link.href}
 					target='_blank'
-					className='flex items-center gap-3 group'
+					className='flex items-center group'
 				>
-					<link.icon size={28} className='text-secondary group-hover:text-primary ease-in duration-200' />
-					{/* <span className='text-sm font-medium text-secondary group-hover:text-primary ease-in duration-200'>
-						{link.label}
-					</span> */}
+					<link.icon className='
+					text-2xl text-secondary group-hover:text-primary ease-in duration-200
+					sm:text-3xl
+					' />
 				</Link>
 			))}
 		</footer>

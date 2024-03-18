@@ -21,7 +21,10 @@ export default function Card(props: Props) {
 			<img
 				src={props.img}
 				alt={`Screenshot of website ${props.title}`}
-				className="w-40 h-auto object-contain"
+				className="
+				w-24 h-auto object-contain
+				sm:w-40
+				"
 			/>
 			<div className="flex flex-col">
 				<h1 className="text-base font-medium text-primary mb-2">

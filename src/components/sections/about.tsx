@@ -19,10 +19,15 @@ export default function About(props: Props) {
 	return (
 		<div
 			id={props.id}
-			className="flex flex-col pt-24 gap-6"
+			className="
+			flex flex-col pt-8 gap-6
+			sm:pt-24"
 			ref={aboutRef}
 		>
-			<div className='flex flex-col z-10 text-base text-primary gap-3'>
+			<div className='
+			flex flex-col z-10 text-sm text-primary gap-3
+			sm:text-base
+			'>
 				<p>
 					Olá! Sou o Emerson, formado em <span className='text-secondary'>Ciência da Computação</span> pela
 					Universidade Federal de Pelotas (UFPel) e <span className='text-secondary'>Desenvolvedor Frontend</span>.

@@ -19,7 +19,7 @@ export default function About(props: Props) {
 	return (
 		<div
 			id={props.id}
-			className="flex flex-col mt-24 gap-6 min-h-full"
+			className="flex flex-col pt-24 gap-6"
 			ref={aboutRef}
 		>
 			<div className='flex flex-col z-10 text-base text-primary gap-3'>
@@ -27,12 +27,6 @@ export default function About(props: Props) {
 					Olá! Sou o Emerson, formado em <span className='text-secondary'>Ciência da Computação</span> pela
 					Universidade Federal de Pelotas (UFPel) e <span className='text-secondary'>Desenvolvedor Frontend</span>.
 				</p>
-				{/* <p>
-					A partir de dezembro de 2022, faço parte do <Link href={'https://wp.ufpel.edu.br/petcomp/'} target="_blank"><span className='text-primary'>PET Computação</span></Link> como bolsista,
-					o que me proporcionou inúmeras oportunidades para o meu crescimento pessoal e profissional. Durante esse período, participei de diversos projetos desafiadores,
-					organizei e ministrei cursos de programação e informática, trabalhei em equipe, participei e organizei eventos, além de outras atividades que aprimoraram minhas habilidades de
-					resolução de problemas, trabalho em equipe e comunicação.
-				</p> */}
 				<p>
 					Durante a minha graduação, além de adquirir experiência com várias linguagens de programação na graduação,
 					como <span className='text-secondary'>C, C++, Java, Python</span> e até mesmo linguagens de baixo nível

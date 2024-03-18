@@ -28,7 +28,6 @@ export default function MenuItem(props: Props) {
 		setSelected(props.id)
 	}
 
-
 	useEffect(() => {
 		if (selected === props.id) {
 			setSelectedColor(designOptions[1].color)

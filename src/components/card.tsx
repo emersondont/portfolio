@@ -16,7 +16,7 @@ export default function Card(props: Props) {
 			href={props.href}
 			target="_blank"
 			className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start
-			hover:bg-blur z-10 border border-transparent hover:border-blur backdrop-blur-lg '
+			hover:bg-blur z-10 border border-transparent hover:border-blur hover:backdrop-blur-lg '
 		>
 			<img
 				src={props.img}
@@ -24,10 +24,10 @@ export default function Card(props: Props) {
 				className="w-40 h-auto object-contain"
 			/>
 			<div className="flex flex-col">
-				<h1 className="text-base font-semibold text-primary mb-2">
+				<h1 className="text-base font-medium text-primary mb-2">
 					{props.title}
 				</h1>
-				<p className="text-base text-secondary">
+				<p className="text-sm text-secondary">
 					{props.description}
 				</p>
 				<div className="text-secondary flex gap-3 mt-4">

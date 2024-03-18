@@ -84,7 +84,7 @@ export default function Projects(props: Props) {
   return (
     <div
       id={props.id}
-      className="flex flex-col justify-center flex-wrap gap-3 min-h-full"
+      className="flex flex-col justify-center flex-wrap gap-3 pt-24"
       ref={projectsRef}
     >
       {cards.map((card, index) => (

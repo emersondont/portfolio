@@ -1,6 +1,7 @@
 import Layout from '@/components/layout';
 import About from '@/components/sections/about';
 import Projects from '@/components/sections/projects';
+import Experience from '@/components/sections/experience';
 
 export const sections = [
 	{
@@ -13,10 +14,11 @@ export const sections = [
 		id: "projects",
 		component: Projects
 	},
-	// {
-	// 	label: "EXPERIÊNCIA",
-	// 	href: "experience",
-	// },
+	{
+		label: "EXPERIÊNCIA",
+		id: "experience",
+		component: Experience
+	},
 ];
 
 export default function Home() {

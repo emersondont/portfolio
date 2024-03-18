@@ -24,8 +24,8 @@ export default function Layout(props: Props) {
 			},
 			{
 				root: null,
-				rootMargin: '0px',
-				threshold: 0.1,
+				rootMargin: '10px',
+				threshold: 0.5,
 			}
 		);
 
@@ -36,17 +36,21 @@ export default function Layout(props: Props) {
 			}
 		});
 
+		return () => {
+			observer.disconnect();
+		};
+
 	}, [setSelected]);
 
 	return (
-		<main className="flex items-center bg-background font-Inter h-screen w-full z-20">
-			<BackgroundHome />
+		<main className="flex items-center bg-background font-Inter h-screen w-full">
+			{/* <BackgroundHome /> */}
 			<section className='z-20 flex flex-col w-1/2 p-24 justify-between h-screen'>
 				<Emersondont />
 				<Menu />
 				<Links />
 			</section>
-			<section className='w-1/2 overflow-y-auto h-full pr-24' style={{ scrollBehavior: 'smooth' }}>
+			<section className='w-1/2 overflow-y-auto h-full pr-24 z-20' style={{ scrollBehavior: 'smooth' }}>
 				{props.children}
 			</section>
 		</main>

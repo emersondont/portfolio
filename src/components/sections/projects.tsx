@@ -76,6 +76,18 @@ const cards = [
       SiJavascript
     ]
   },
+  {
+    title: 'Portfólio',
+    description: 'Este portfólio, onde falo um pouco sobre mim e listo meus projetos.',
+    href: 'https://emersondont.vercel.app/',
+    img: '/img/Portfolio.png',
+    techs: [
+      SiNextdotjs,
+      SiReact,
+      SiTailwindcss,
+      SiTypescript
+    ]
+  },
 ];
 
 export default function Projects(props: Props) {

@@ -6,15 +6,8 @@ interface Props {
 	id: string
 }
 
-const designOptions = [
-	{ width: '8', color: 'secondary' },
-	{ width: '16', color: 'primary' }
-]
-
 export default function MenuItem(props: Props) {
 	const { selected, setSelected } = useContext(MenuContext)
-	const [selectedColor, setSelectedColor] = useState<string>(designOptions[1].color)
-	const [selectedWidth, setSelectedWidth] = useState<string>(designOptions[1].width)
 
 	const scrollToDiv = (id: string) => {
 		const element = document.getElementById(id);
@@ -28,16 +21,6 @@ export default function MenuItem(props: Props) {
 		setSelected(props.id)
 	}
 
-	useEffect(() => {
-		if (selected === props.id) {
-			setSelectedColor(designOptions[1].color)
-			setSelectedWidth(designOptions[1].width)
-		} else {
-			setSelectedColor(designOptions[0].color)
-			setSelectedWidth(designOptions[0].width)
-		}
-	}, [selected])
-
 	return (
 		<li className={`cursor-pointer group p-1 items-center gap-4
 		${selected === props.id ? 'flex': 'hidden'}
@@ -45,14 +28,13 @@ export default function MenuItem(props: Props) {
 		`}
 			onClick={handleClicked}
 		>
-			<span style={{ height: '1px' }}
-				className={`ease-in duration-200 
-					bg-${selectedColor} w-${selectedWidth} 
-					group-hover:w-${designOptions[1].width}
-					group-hover:bg-${designOptions[1].color}
-					`}
+			<span 
+				className={`ease-in duration-200 h-px
+					${selected === props.id ? 'bg-primary w-16' : 'bg-secondary w-8'}
+					group-hover:w-16
+					group-hover:bg-primary`}
 			/>
-			<span className={`ease-in duration-200 text-sm font-semibold text-${selectedColor} group-hover:text-${designOptions[1].color}`}>
+			<span className={`ease-in duration-200 text-sm font-semibold ${selected === props.id ? 'text-primary' : 'text-secondary'} group-hover:text-primary`}>
 				{props.children}
 			</span>
 		</li>

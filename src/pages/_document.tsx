@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function Document() {
   return (
@@ -8,7 +9,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string}/>
       </body>
     </Html>
   )

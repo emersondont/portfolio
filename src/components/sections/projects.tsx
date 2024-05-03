@@ -9,7 +9,9 @@ import {
 	SiTypescript,
 	SiReact,
 	SiNextdotjs,
-  SiWebgl
+  SiWebgl,
+  SiSpringboot,
+  SiPostgresql
  } from "react-icons/si";
 
 interface Props {
@@ -27,6 +29,18 @@ const cards = [
       SiHtml5,
       SiCss3,
       SiJavascript
+    ]
+  },
+  {
+    title: 'Notes - Listas de Tarefas',
+    description: 'Projeto Full Stack de uma aplicação de listas de tarefas.',
+    href: 'https://github.com/emersondont/notes',
+    img: '/img/Notes.png',
+    techs: [
+      SiSpringboot,
+      SiPostgresql,
+      SiNextdotjs,
+      SiTailwindcss
     ]
   },
   {

@@ -4,9 +4,10 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="pt-br">
       <Head>
         <meta name="google-site-verification" content="jj7dEZwtYexCxelWDvkojbJMPezq2OWy6RRBXJwRjU0" />
+        <title>Emersondont - Desenvolvedor</title>
       </Head>
       <body>
         <Main />

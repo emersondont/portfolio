@@ -42,7 +42,7 @@ export default function About(props: Props) {
 				</p>
 				<p>
 					Atualmente, estou expandindo meu conjunto de habilidades explorando <span className='text-secondary'>TypeScript, Tailwind </span>
-					, <span className='text-secondary'>Next.js</span> e também o <span className='text-secondary'>Java Spring Boot</span> para projeto backend.
+					, <span className='text-secondary'>Next.js</span> e também o <span className='text-secondary'>Java Spring Boot</span> para projetos backend.
 				</p>
 				<p>
 					Sinta-se à vontade para explorar meu portfólio e conhecer mais sobre os projetos que realizei!

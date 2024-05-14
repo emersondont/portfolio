@@ -44,8 +44,8 @@ export default function Layout(props: Props) {
 
 	return (
 		<main className="
-		flex flex-col items-center bg-background font-Inter h-screen w-full
-		md:flex-row
+		flex flex-col items-center font-Inter h-screen w-full
+		md:flex-row bg-background
 		">
 			{/* <BackgroundHome /> */}
 			<section className='

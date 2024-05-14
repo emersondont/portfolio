@@ -1,18 +1,21 @@
 import React, { useRef } from 'react';
 import Card from '@/components/card';
-import { 
+import {
   SiWordpress,
   SiCss3,
-	SiTailwindcss,
-	SiHtml5,
-	SiJavascript,
-	SiTypescript,
-	SiReact,
-	SiNextdotjs,
+  SiTailwindcss,
+  SiHtml5,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
   SiWebgl,
   SiSpringboot,
-  SiPostgresql
- } from "react-icons/si";
+  SiPostgresql,
+  SiAmazonaws,
+  SiDocker,
+  SiNginx
+} from "react-icons/si";
 
 interface Props {
   id: string
@@ -32,15 +35,32 @@ const cards = [
     ]
   },
   {
+    title: 'Wallet',
+    description: 'Projeto Full Stack de uma carteira virtual, hospedado na AWS.',
+    href: 'https://github.com/emersondont/wallet',
+    img: '/img/Wallet.png',
+    techs: [
+      SiReact,
+      SiTailwindcss,
+      SiTypescript,
+      SiSpringboot,
+      SiPostgresql,
+      SiAmazonaws,
+      SiDocker,
+      SiNginx
+    ]
+  },
+  {
     title: 'Notes - Listas de Tarefas',
     description: 'Projeto Full Stack de uma aplicação de listas de tarefas.',
     href: 'https://github.com/emersondont/notes',
     img: '/img/Notes.png',
     techs: [
-      SiSpringboot,
-      SiPostgresql,
       SiNextdotjs,
-      SiTailwindcss
+      SiTypescript,
+      SiTailwindcss,
+      SiSpringboot,
+      SiPostgresql
     ]
   },
   {
@@ -105,7 +125,7 @@ const cards = [
 ];
 
 export default function Projects(props: Props) {
-	const projectsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   return (
     <div

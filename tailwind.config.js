@@ -13,8 +13,8 @@ module.exports = {
       colors: {
         primary: '#E2E8F0',
         secondary: '#a178b9',
-        background: '#392657',
-        blur: 'rgba(255,255,255,0.05)',
+        background: '#2f1b4e',
+        blur: 'rgba(255,255,255,0.05)'
       }
     },
   },

@@ -23,13 +23,14 @@ export default function MenuItem(props: Props) {
 
 	return (
 		<li className={`cursor-pointer group p-1 items-center gap-4
-		${selected === props.id ? 'flex': 'hidden'}
+		${selected === props.id ? 'flex' : 'hidden'}
 		md:flex
 		`}
 			onClick={handleClicked}
 		>
-			<span 
-				className={`ease-in duration-200 h-px
+			<span
+				style={{ height: '2px' }}
+				className={`ease-in duration-200 rounded
 					${selected === props.id ? 'bg-primary w-16' : 'bg-secondary w-8'}
 					group-hover:w-16
 					group-hover:bg-primary`}

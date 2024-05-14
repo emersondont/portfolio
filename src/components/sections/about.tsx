@@ -7,6 +7,8 @@ import {
 	SiTypescript,
 	SiReact,
 	SiNextdotjs,
+	SiSpringboot,
+	SiDocker
 } from 'react-icons/si';
 
 interface Props {
@@ -57,6 +59,8 @@ export default function About(props: Props) {
 				<SiTypescript size={28} />
 				<SiReact size={28} />
 				<SiNextdotjs size={28} />
+				<SiSpringboot size={28} />
+				<SiDocker size={28} />
 			</div>
 		</div>
 	)

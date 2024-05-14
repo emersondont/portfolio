@@ -63,18 +63,18 @@ const cards = [
       SiPostgresql
     ]
   },
-  {
-    title: 'Império Suplementos',
-    description: 'Plataforma para exibir produtos de uma loja de suplementos.',
-    href: 'https://imperiosuplementos.vercel.app/',
-    img: '/img/Imperio-suplementos.png',
-    techs: [
-      SiNextdotjs,
-      SiReact,
-      SiTailwindcss,
-      SiTypescript
-    ]
-  },
+  // {
+  //   title: 'Império Suplementos',
+  //   description: 'Plataforma para exibir produtos de uma loja de suplementos.',
+  //   href: 'https://imperiosuplementos.vercel.app/',
+  //   img: '/img/Imperio-suplementos.png',
+  //   techs: [
+  //     SiNextdotjs,
+  //     SiReact,
+  //     SiTailwindcss,
+  //     SiTypescript
+  //   ]
+  // },
   {
     title: 'Color Converter',
     description: 'Um site prático e versátil para converter cores sem esforço.',

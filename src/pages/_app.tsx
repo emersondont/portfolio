@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<MenuProvider>
 			<Head>
 				<title>Emersondont - Desenvolvedor</title>
+				<link rel="icon" href="icon.png" sizes="any" />
 			</Head>
 			<Component {...pageProps} />
 		</MenuProvider>

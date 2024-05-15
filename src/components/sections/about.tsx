@@ -52,15 +52,15 @@ export default function About(props: Props) {
 			</div>
 
 			<div className='text-secondary flex w-full justify-center gap-6 flex-wrap z-10'>
-				<SiHtml5 size={28} />
-				<SiCss3 size={28} />
-				<SiTailwindcss size={28} />
-				<SiJavascript size={28} />
-				<SiTypescript size={28} />
-				<SiReact size={28} />
-				<SiNextdotjs size={28} />
-				<SiSpringboot size={28} />
-				<SiDocker size={28} />
+				<SiHtml5 size={28} title='HTML'/>
+				<SiCss3 size={28} title='CSS'/>
+				<SiTailwindcss size={28} title='Tailwind CSS'/>
+				<SiJavascript size={28} title='JavaScript'/>
+				<SiTypescript size={28} title='TypeScript'/>
+				<SiReact size={28} title='ReactJs'/>
+				<SiNextdotjs size={28} title='Next.js'/>
+				<SiSpringboot size={28} title='Spring boot'/>
+				<SiDocker size={28} title='Docker'/>
 			</div>
 		</div>
 	)

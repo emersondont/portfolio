@@ -7,7 +7,7 @@ interface Props {
 	description: string
 	href: string
 	img: string
-	techs: IconType[]
+	techs: {icon: IconType, label: string}[]
 }
 
 export default function Card(props: Props) {
@@ -33,9 +33,9 @@ export default function Card(props: Props) {
 				<p className="text-sm text-secondary">
 					{props.description}
 				</p>
-				<div className="text-secondary flex gap-3 mt-4">
+				<div className="text-secondary flex gap-3 mt-4 flex-wrap">
 					{props.techs.map((Tech, index) => (
-						<Tech key={index} size={22} />
+						<Tech.icon key={index} size={22} title={Tech.label}/>
 					))}
 				</div>
 			</div>

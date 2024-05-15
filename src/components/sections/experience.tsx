@@ -20,7 +20,6 @@ const experiences = [
 export default function Experience(props: Props) {
 	const experienceRef = useRef<HTMLDivElement>(null);
 
-
 	return (
 		<div
 			id={props.id}

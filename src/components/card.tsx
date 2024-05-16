@@ -30,7 +30,7 @@ export default function Card(props: Props) {
 				<h1 className="text-base font-medium text-primary mb-2">
 					{props.title}
 				</h1>
-				<p className="text-sm text-secondary">
+				<p className="text-sm text-tertiary">
 					{props.description}
 				</p>
 				<div className="text-secondary flex gap-3 mt-4 flex-wrap">

@@ -11,10 +11,11 @@ module.exports = {
         'Inter': ['Inter', 'sans-serif']
       },
       colors: {
-        primary: '#E2E8F0',
-        secondary: '#a178b9',
-        background: '#2f1b4e',
-        blur: 'rgba(255,255,255,0.05)'
+        primary: '#faf5ff',
+        secondary: '#a855f7',
+        tertiary: '#c084fc',
+        background: '#3b0764',
+        blur: 'rgba(88,28,135,0.5)'
       }
     },
   },

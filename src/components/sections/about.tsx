@@ -23,7 +23,9 @@ export default function About(props: Props) {
 			id={props.id}
 			className="
 			flex flex-col pt-8 gap-6
-			sm:pt-24"
+			sm:pt-24
+			lg:min-h-full
+			"
 			ref={aboutRef}
 		>
 			<div className='

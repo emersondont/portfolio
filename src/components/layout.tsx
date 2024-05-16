@@ -1,10 +1,9 @@
-import React, { ReactNode, useEffect, useContext, useRef } from 'react';
+import React, { ReactNode, useEffect, useContext } from 'react';
 import { MenuContext } from "@/context/menuContext";
 import Menu from './menu'
 import Links from './links';
 import Emersondont from './emersondont';
 import { sections } from '../pages/index';
-import BackgroundHome from './backgroundHome'
 
 interface Props {
 	children: ReactNode
@@ -45,7 +44,7 @@ export default function Layout(props: Props) {
 	return (
 		<main className="
 		flex flex-col items-center font-Inter h-screen w-full
-		md:flex-row bg-background
+		md:flex-row bg-background backdrop-blur
 		">
 			{/* <BackgroundHome /> */}
 			<section className='

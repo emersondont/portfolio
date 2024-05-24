@@ -24,7 +24,7 @@ export default function Layout(props: Props) {
 			{
 				root: null,
 				rootMargin: '10px',
-				threshold: 0.5,
+				threshold: 0.4,
 			}
 		);
 

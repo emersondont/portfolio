@@ -15,7 +15,7 @@ export default function Emersondont() {
 				sm:text-base
 				'>
 					CIENTISTA DA COMPUTAÇÃO<br/>
-					DESENVOLVEDOR FRONTEND
+					DESENVOLVEDOR FULL-STACK
 				</p>
 			</div>
 	)

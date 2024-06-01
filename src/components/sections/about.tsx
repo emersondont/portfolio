@@ -34,7 +34,7 @@ export default function About(props: Props) {
 			'>
 				<p>
 					Olá! Sou o Emerson, formado em <span className='text-secondary'>Ciência da Computação</span> pela
-					Universidade Federal de Pelotas (UFPel) e <span className='text-secondary'>Desenvolvedor Frontend</span>.
+					Universidade Federal de Pelotas (UFPel) e me tornando um <span className='text-secondary'>Desenvolvedor Full-Stack</span>.
 				</p>
 				<p>
 					Durante a minha graduação, além de adquirir experiência com várias linguagens de programação na graduação,

@@ -53,29 +53,29 @@ const projects = [
       techInfo.typescript
     ]
   },
-  {
-    title: 'Minecraft 3D store',
-    description: 'Uma loja de objetos 3D',
-    href: 'https://minecraft-3d-store.vercel.app/',
-    img: '/img/Minecraft-3d-store.png',
-    techs: [
-      techInfo.webgl,
-      techInfo.html,
-      techInfo.css,
-      techInfo.javascript
-    ]
-  },
-  {
-    title: 'Ray Marching',
-    description: 'Minha implementação de Ray Marching.',
-    href: 'https://ray-marching-xi.vercel.app/',
-    img: '/img/Ray-marching.png',
-    techs: [
-      techInfo.webgl,
-      techInfo.html,
-      techInfo.javascript
-    ]
-  },
+  // {
+  //   title: 'Minecraft 3D store',
+  //   description: 'Uma loja de objetos 3D',
+  //   href: 'https://minecraft-3d-store.vercel.app/',
+  //   img: '/img/Minecraft-3d-store.png',
+  //   techs: [
+  //     techInfo.webgl,
+  //     techInfo.html,
+  //     techInfo.css,
+  //     techInfo.javascript
+  //   ]
+  // },
+  // {
+  //   title: 'Ray Marching',
+  //   description: 'Minha implementação de Ray Marching.',
+  //   href: 'https://ray-marching-xi.vercel.app/',
+  //   img: '/img/Ray-marching.png',
+  //   techs: [
+  //     techInfo.webgl,
+  //     techInfo.html,
+  //     techInfo.javascript
+  //   ]
+  // },
   {
     title: 'Portfólio',
     description: 'Este portfólio, onde falo um pouco sobre mim e listo meus projetos.',

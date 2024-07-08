@@ -17,6 +17,44 @@ body {
 .custom-switch-shadow-left {
   box-shadow: inset -4px 0 5px rgba(0, 0, 0, 0.5);
 }
+
 .custom-switch-shadow-right {
   box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.border-card {
+  content: '';
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  padding: 2px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#ff1 0 0);
+  mask-composite: exclude;
+}
+
+.border-card::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 120%;
+  height: 60%;
+  background: transparent;
+}
+
+.border-card:hover::before {
+  background: linear-gradient(-90deg, transparent 50%, rgba(186, 114, 253, .8) 50%);
+  animation: rotateBorder 6s linear infinite;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

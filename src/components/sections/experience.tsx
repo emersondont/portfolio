@@ -35,7 +35,7 @@ export default function Experience(props: Props) {
 					target='_blank'
 					key={index}
 					className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
-				hover:bg-blur z-10 border border-transparent hover:border-blur hover:backdrop-blur-lg 
+				hover:bg-blur z-10 hover:backdrop-blur-lg relative
 						flex-wrap
 						sm:flex-nowrap
 				'
@@ -51,6 +51,7 @@ export default function Experience(props: Props) {
 						<h3 className='text-sm font-medium text-primary mb-2'>{experience.role}</h3>
 						<p className='text-sm text-secondary'>{experience.description}</p>
 					</div>
+					<div className="border-card"/>
 				</Link>
 			))}
 		</div>

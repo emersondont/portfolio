@@ -46,10 +46,25 @@ body {
 
 .border-card:hover::before {
   background: linear-gradient(-90deg, transparent 50%, rgba(186, 114, 253, .8) 50%);
-  animation: rotateBorder 4s linear infinite;
+  animation: rotate 4s linear infinite;
 }
 
-@keyframes rotateBorder {
+.background-blur {
+  filter: blur(260px);
+  -webkit-filter: blur(260px);
+  background-image: url("../../public/img/bg-image2.png");
+  height: 150%;
+  width: 150%;
+  position: fixed;
+  top: -25%;
+  left: -25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
   }

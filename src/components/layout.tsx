@@ -44,8 +44,9 @@ export default function Layout(props: Props) {
 	return (
 		<main className="
 		flex flex-col items-center font-Inter h-screen w-full
-		md:flex-row bg-background backdrop-blur
+		md:flex-row bg-background
 		">
+			<div className='background-blur'/>
 			{/* <BackgroundHome /> */}
 			<section className='
 			py-6 px-6 z-20 flex flex-wrap justify-between gap-4 w-full

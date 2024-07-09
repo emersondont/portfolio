@@ -59,7 +59,7 @@ export default function Layout(props: Props) {
 			</section>
 			<section style={{ scrollBehavior: 'smooth' }}
 				className='
-				px-6 overflow-y-auto h-full z-20
+				px-6 overflow-y-auto h-full z-20 overflow-x-hidden
 				lg:pr-24
 				md:pr-16 md:w-1/2
 				sm:px-8

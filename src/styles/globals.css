@@ -38,15 +38,15 @@ body {
   content: '';
   position: absolute;
   top: 20%;
-  left: -10%;
-  width: 120%;
+  left: -25%;
+  width: 150%;
   height: 60%;
   background: transparent;
 }
 
 .border-card:hover::before {
   background: linear-gradient(-90deg, transparent 50%, rgba(186, 114, 253, .8) 50%);
-  animation: rotateBorder 6s linear infinite;
+  animation: rotateBorder 4s linear infinite;
 }
 
 @keyframes rotateBorder {

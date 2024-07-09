@@ -16,7 +16,10 @@ export default function Card(props: Props) {
 			href={props.href}
 			target="_blank"
 			className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start
-			hover:bg-blur z-10 hover:backdrop-blur-lg relative'
+			hover:bg-blur z-10 hover:backdrop-blur-lg relative
+			md:flex-wrap
+			lg:flex-nowrap
+			'
 		>
 			<img
 				src={props.img}

@@ -1,15 +1,5 @@
 import React, { useRef } from 'react';
-import {
-	SiCss3,
-	SiTailwindcss,
-	SiHtml5,
-	SiJavascript,
-	SiTypescript,
-	SiReact,
-	SiNextdotjs,
-	SiSpringboot,
-	SiDocker
-} from 'react-icons/si';
+import Techs from '../techs';
 
 interface Props {
 	id: string;
@@ -53,17 +43,7 @@ export default function About(props: Props) {
 				</p>
 			</div>
 
-			<div className='text-secondary flex w-full justify-center gap-6 flex-wrap z-10'>
-				<SiHtml5 size={28} title='HTML'/>
-				<SiCss3 size={28} title='CSS'/>
-				<SiTailwindcss size={28} title='Tailwind CSS'/>
-				<SiJavascript size={28} title='JavaScript'/>
-				<SiTypescript size={28} title='TypeScript'/>
-				<SiReact size={28} title='ReactJs'/>
-				<SiNextdotjs size={28} title='Next.js'/>
-				<SiSpringboot size={28} title='Spring boot'/>
-				<SiDocker size={28} title='Docker'/>
-			</div>
+			<Techs />
 		</div>
 	)
 }

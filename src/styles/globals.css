@@ -37,25 +37,22 @@ body {
 .border-card::before {
   content: '';
   position: absolute;
-  top: 20%;
-  left: -25%;
-  width: 150%;
-  height: 60%;
+  width: 120px;
+  height: 60px;
   background: transparent;
+  offset-path: border-box;
+  offset-anchor: 100% 50%;
+  offset-distance: 0%;
 }
 
 .border-card:hover::before {
-  background: linear-gradient(-90deg, transparent 50%, rgba(186, 114, 253, .8) 50%);
-  animation: rotateBorder 4s linear infinite;
+  background: radial-gradient(at right center, rgba(186, 114, 253, 1), transparent 60%);
+  animation: moveAlongThePath 4s linear infinite;
 }
 
-@keyframes rotateBorder {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
+@keyframes moveAlongThePath {
+  to {
+    offset-distance: 100%;
   }
 }
 

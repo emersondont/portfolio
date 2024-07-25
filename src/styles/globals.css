@@ -30,7 +30,7 @@ body {
   left: 0;
   border-radius: inherit;
   padding: 2px;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#ff1 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
 
@@ -112,5 +112,39 @@ body {
 @keyframes scrollLeft {
   to {
     left: -32px;
+  }
+}
+
+.card-animation {
+  animation: appear 1ms ease-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+}
+
+@keyframes appear {
+  from {
+    opacity: .6;
+    scale: .8;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+
+  entry 0% {
+    transform: translateY(200%);
+  }
+
+  entry 100% {
+    transform: translateY(0);
+  }
+
+  exit 0% {
+    transform: translateY(0);
+  }
+
+  exit 100% {
+    transform: translateY(-200%);
   }
 }

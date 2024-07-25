@@ -35,7 +35,7 @@ export default function Experience(props: Props) {
 					target='_blank'
 					key={index}
 					className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
-				hover:bg-blur z-10 hover:backdrop-blur-lg relative
+				hover:bg-blur z-10 hover:backdrop-blur-lg relative card-animation
 						flex-wrap
 						lg:flex-nowrap
 				'

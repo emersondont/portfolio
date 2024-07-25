@@ -15,8 +15,8 @@ export default function Card(props: Props) {
 		<Link
 			href={props.href}
 			target="_blank"
-			className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start
-			hover:bg-blur z-10 hover:backdrop-blur-lg relative
+			className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start relative card-animation
+			hover:bg-blur z-10 hover:backdrop-blur-lg
 			md:flex-wrap
 			lg:flex-nowrap
 			'

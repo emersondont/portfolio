@@ -45,6 +45,7 @@ export default function Layout(props: Props) {
 		<main className="
 		flex flex-col items-center font-Inter h-screen w-full
 		md:flex-row bg-background backdrop-blur
+		
 		">
 			{/* <BackgroundHome /> */}
 			<section className='
@@ -52,6 +53,7 @@ export default function Layout(props: Props) {
 			lg:pl-24
 			md:flex-col md:h-screen md:py-24 md:pl-16 md:flex-nowrap md:w-1/2
 			sm:px-8
+			md:portrait:py-64
 			'>
 				<Emersondont />
 				<Menu />

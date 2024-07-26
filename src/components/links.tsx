@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import {
 	SiGithub,
 	SiLinkedin,
@@ -9,36 +10,53 @@ const links = [
 	{
 		label: 'GitHub',
 		href: 'https://www.github.com/emersondont',
-		icon: SiGithub
+		icon: SiGithub,
+		spanHref: 'github.com/'
 	},
 	{
 		label: 'LinkedIn',
 		href: 'https://www.linkedin.com/in/emersondont/',
-		icon: SiLinkedin
+		icon: SiLinkedin,
+		spanHref: 'linkedin.com/in/'
 	},
 	{
 		label: 'Instagram',
 		href: 'https://www.instagram.com/emersondont/',
-		icon: SiInstagram
+		icon: SiInstagram,
+		spanHref: 'instagram.com/'
 	}
 ]
 
 export default function Links() {
+	const [linkHover, setLinkHover] = useState('');
+	const [show, setShow] = useState(false);
 	return (
-		<footer className='flex gap-2 sm:gap-4'>
-			{links.map((link, index) => (
-				<Link
-					key={index}
-					href={link.href}
-					target='_blank'
-					className='flex items-center group'
-				>
-					<link.icon className='
-					text-2xl text-secondary group-hover:text-primary ease-in duration-200
-					sm:text-3xl
+		<footer className='flex flex-col items-start relative'>
+			{
+			show &&
+				<p className='w-56 text-end absolute -top-10 text-sm hidden md:block'>
+					<span className='text-secondary text-animation' key={linkHover}>{linkHover}</span>
+					<span className='font-semibold'>emersondont</span>
+				</p>
+			}
+			<div className='flex gap-1 sm:gap-4 ssm:gap-2'
+				onMouseEnter={() => setShow(true)}
+				onMouseLeave={() => [setShow(false), setLinkHover('')]}
+			>
+				{links.map((link, index) => (
+					<Link
+						key={index}
+						href={link.href}
+						target='_blank'
+						className='flex items-center group'
+						onMouseEnter={() => setLinkHover(link.spanHref)}
+					>
+						<link.icon className='
+					text-3xl text-secondary group-hover:text-primary ease-in duration-200
 					' />
-				</Link>
-			))}
+					</Link>
+				))}
+			</div>
 		</footer>
 	);
 }

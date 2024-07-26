@@ -18,6 +18,12 @@ module.exports = {
         blur: 'rgba(88,28,135,0.5)'
       }
     },
+    screens: {
+      'ssm': '370px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px'
+    }
   },
   plugins: [],
 }

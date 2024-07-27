@@ -36,7 +36,7 @@ export default function Links() {
 			show &&
 				<p className='w-56 text-end absolute -top-10 text-sm hidden md:block'>
 					<span className='text-secondary text-animation' key={linkHover}>{linkHover}</span>
-					<span className='font-semibold'>emersondont</span>
+					<span className='font-semibold text-animation'>emersondont</span>
 				</p>
 			}
 			<div className='flex gap-1 sm:gap-4 ssm:gap-2'

@@ -43,17 +43,14 @@ export default function Layout(props: Props) {
 
 	return (
 		<main className="
-		flex flex-col items-center font-Inter h-screen w-full
-		md:flex-row bg-background backdrop-blur
-		
+		font-Inter flex w-full items-start flex-wrap bg-background h-screen
+		md:flex-row
 		">
-			{/* <BackgroundHome /> */}
 			<section className='
-			py-6 px-6 z-20 flex flex-wrap justify-between gap-4 w-full
+			p-6 z-30 flex flex-wrap justify-between gap-4 w-full sticky top-0 left-0 bg-background items-center
 			lg:pl-24
-			md:flex-col md:h-screen md:py-24 md:pl-16 md:flex-nowrap md:w-1/2
+			md:flex-col md:h-screen md:py-24 md:pl-16  md:w-1/2 md:portrait:py-64 md:items-start
 			sm:px-8
-			md:portrait:py-64
 			'>
 				<Emersondont />
 				<Menu />
@@ -61,7 +58,7 @@ export default function Layout(props: Props) {
 			</section>
 			<section style={{ scrollBehavior: 'smooth' }}
 				className='
-				px-6 overflow-y-auto h-full z-20 overflow-x-hidden
+				px-6 h-full overflow-x-hidden
 				lg:pr-24
 				md:pr-16 md:w-1/2
 				sm:px-8

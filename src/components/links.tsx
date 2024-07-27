@@ -33,8 +33,10 @@ export default function Links() {
 	return (
 		<footer className='flex flex-col items-start relative'>
 			{
-			show &&
-				<p className='w-56 text-end absolute -top-10 text-sm hidden md:block'>
+				show &&
+				<p className='text-end absolute -top-10 text-sm hidden md:block'
+					style={{ width: '27ch' }}
+				>
 					<span className='text-secondary text-animation' key={linkHover}>{linkHover}</span>
 					<span className='font-semibold text-animation'>emersondont</span>
 				</p>

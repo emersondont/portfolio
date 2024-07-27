@@ -49,7 +49,7 @@ export default function Layout(props: Props) {
 			<section className='
 			p-6 z-30 flex flex-wrap justify-between gap-4 w-full sticky top-0 left-0 bg-background items-center
 			lg:pl-24
-			md:flex-col md:h-screen md:py-24 md:pl-16  md:w-1/2 md:portrait:py-64 md:items-start
+			md:flex-col md:h-screen md:py-24 md:pl-16  md:w-1/2 md:portrait:py-32 md:items-start
 			sm:px-8
 			'>
 				<Emersondont />

@@ -43,7 +43,7 @@ export default function Layout(props: Props) {
 
 	return (
 		<main className="
-		font-Inter flex w-full items-start flex-wrap bg-background h-screen
+		font-Inter flex w-full items-start flex-wrap bg-background
 		md:flex-row
 		">
 			<section className='

@@ -38,7 +38,7 @@ body {
 .border-card::before {
   content: '';
   position: absolute;
-  width: 120px;
+  width: 220px;
   height: 60px;
   background: transparent;
   offset-path: border-box;
@@ -46,9 +46,14 @@ body {
   offset-distance: 0%;
 }
 
+.border-card:hover {
+  background-color: rgba(88,28,135,0.5);
+  transition: all 200ms ease-out;
+}
+
 .border-card:hover::before {
-  background: radial-gradient(at right center, rgba(186, 114, 253, 1), transparent 60%);
-  animation: moveAlongThePath 4s linear infinite;
+  background: radial-gradient(at right center, #c084fc, transparent 60%);
+  animation: moveAlongThePath 3s linear infinite;
 }
 
 @keyframes moveAlongThePath {
@@ -116,7 +121,7 @@ body {
   }
 }
 
-.card-animation {
+/* .card-animation {
   animation: appear 1ms ease-out;
   animation-timeline: view();
   animation-range: cover 0% cover 50%;
@@ -148,7 +153,7 @@ body {
   exit 100% {
     transform: translateY(-100%);
   }
-}
+} */
 
 
 .text-animation {

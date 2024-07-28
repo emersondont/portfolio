@@ -46,15 +46,26 @@ const techs = [
   {
     title: 'Docker',
     icon: SiDocker
-  },
+  }
 ]
 
 export default function Techs() {
+  const tamTechs = techs.length
+
+  //animation-delay: calc(12s / 9 * (9 - 1) * -1);
+  const funcAnimationDelay = (value: number) => {
+    return `calc(12s / ${tamTechs} * (${tamTechs} - ${value}) * -1)`
+  }
   return (
     <div className='text-secondary relative h-8 overflow-hidden wrapper'>
       {
         techs.map(({ title, icon: Icon }, index) => (
-          <Icon key={index} size={32} title={title} className='absolute iconScroll' />
+          <Icon key={index} size={32} title={title} className='absolute iconScroll'
+            style={{
+              animationDelay: funcAnimationDelay(index),
+              left: `max(calc(32px * ${tamTechs * 2}), 100%)`
+            }}
+          />
         ))
       }
     </div>

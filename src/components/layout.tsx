@@ -56,7 +56,7 @@ export default function Layout(props: Props) {
 				<Menu />
 				<Links />
 			</section>
-			<section style={{ scrollBehavior: 'smooth' }}
+			<section
 				className='
 				px-6 h-full overflow-x-hidden
 				lg:pr-24

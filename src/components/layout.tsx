@@ -4,6 +4,7 @@ import Menu from './menu'
 import Links from './links';
 import Emersondont from './emersondont';
 import { sections } from '../pages/index';
+import { motion } from 'framer-motion'
 
 interface Props {
 	children: ReactNode
@@ -42,11 +43,16 @@ export default function Layout(props: Props) {
 	}, [setSelected]);
 
 	return (
-		<main className="
+		<motion.main
+			transition={{ staggerChildren: 0.4 }}
+			initial="hidden"
+			animate="visible"
+			className="
 		font-Inter flex w-full items-start flex-wrap bg-background
 		md:flex-row
 		">
-			<section className='
+			<section
+				className='
 			p-6 z-30 flex flex-wrap justify-between gap-4 w-full sticky top-0 left-0 bg-background items-center
 			lg:pl-24
 			md:flex-col md:h-screen md:py-24 md:pl-16  md:w-1/2 md:portrait:py-32 md:items-start
@@ -65,6 +71,6 @@ export default function Layout(props: Props) {
 			'>
 				{props.children}
 			</section>
-		</main>
+		</motion.main>
 	)
 }

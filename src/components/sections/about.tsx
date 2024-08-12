@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React, { useRef } from 'react';
 import Techs from '../techs';
 
@@ -7,14 +8,22 @@ interface Props {
 
 export default function About(props: Props) {
 	const aboutRef = useRef<HTMLDivElement>(null);
-
+	const itemVariants = {
+		hidden: { opacity: 0, y: -40 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: { type: 'spring', duration: 1, bounce: 0.5 }
+		},
+	};
 	return (
-		<div
+		<motion.div
+			variants={itemVariants}
 			id={props.id}
 			className="
 			flex flex-col pt-8 gap-6
 			sm:pt-24
-			lg:min-h-full
+			lg:min-h-screen
 			"
 			ref={aboutRef}
 		>
@@ -44,6 +53,6 @@ export default function About(props: Props) {
 			</div>
 
 			<Techs />
-		</div>
+		</motion.div>
 	)
 }

@@ -5,6 +5,7 @@ import {
 	SiLinkedin,
 	SiInstagram
 } from 'react-icons/si';
+import { motion } from 'framer-motion'
 
 const links = [
 	{
@@ -30,8 +31,18 @@ const links = [
 export default function Links() {
 	const [linkHover, setLinkHover] = useState('');
 	const [show, setShow] = useState(false);
+	const itemVariants = {
+		hidden: { opacity: 0, x: -40 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: { type: 'spring', duration: 1, bounce: 0.5 }
+		},
+	};
 	return (
-		<footer className='flex flex-col items-start relative'>
+		<motion.footer
+			variants={itemVariants}
+			className='flex flex-col items-start relative'>
 			{
 				show &&
 				<p className='text-end absolute -top-10 text-sm hidden md:block'
@@ -59,6 +70,6 @@ export default function Links() {
 					</Link>
 				))}
 			</div>
-		</footer>
+		</motion.footer>
 	);
 }

@@ -11,11 +11,11 @@ export default function Projects(props: Props) {
   const projectsRef = useRef<HTMLDivElement>(null);
 
   return (
-    <motion.div
-      transition={{ staggerChildren: 0.2 }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ margin: '-150px'}}
+    <div
+      // transition={{ staggerChildren: 0.2 }}
+      // initial="hidden"
+      // whileInView="visible"
+      // viewport={{ margin: '-150px'}}
       id={props.id}
       className="
       flex flex-col justify-center flex-wrap gap-3 pt-40 min-h-screen
@@ -32,6 +32,6 @@ export default function Projects(props: Props) {
           techs={project.techs}
         />
       ))}
-    </motion.div>
+    </div>
   )
 }

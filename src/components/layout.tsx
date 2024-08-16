@@ -44,7 +44,7 @@ export default function Layout(props: Props) {
 
 	return (
 		<motion.main
-			transition={{ staggerChildren: 0.4 }}
+			transition={{ staggerChildren: 0.2 }}
 			initial="hidden"
 			animate="visible"
 			className="

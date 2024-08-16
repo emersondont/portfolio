@@ -19,21 +19,21 @@ const experiences = [
 
 export default function Experience(props: Props) {
 	const experienceRef = useRef<HTMLDivElement>(null);
-	const itemVariants = {
-		hidden: { opacity: 0, x: 40 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: { type: 'spring', duration: 1, bounce: 0.5 }
-		},
-	};
+	// const itemVariants = {
+	// 	hidden: { opacity: 0, x: 40 },
+	// 	visible: {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		transition: { type: 'spring', duration: 1, bounce: 0.5 }
+	// 	},
+	// };
 
 	return (
-		<motion.div
-			transition={{ staggerChildren: 0.2 }}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ margin: '-150px' }}
+		<div
+			// transition={{ staggerChildren: 0.2 }}
+			// initial="hidden"
+			// whileInView="visible"
+			// viewport={{ margin: '-150px' }}
 			id={props.id}
 			className="
 				flex flex-col gap-3 pt-40 min-h-screen
@@ -42,7 +42,7 @@ export default function Experience(props: Props) {
 			ref={experienceRef}
 		>
 			{experiences.map((experience, index) => (
-				<motion.div variants={itemVariants}>
+				<div>
 					<Link
 						href={experience.href}
 						target='_blank'
@@ -66,8 +66,8 @@ export default function Experience(props: Props) {
 						</div>
 						<div className="border-card" />
 					</Link>
-				</motion.div>
+				</div>
 			))}
-		</motion.div>
+		</div>
 	)
 }

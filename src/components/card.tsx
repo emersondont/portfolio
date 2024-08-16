@@ -12,16 +12,16 @@ interface Props {
 }
 
 export default function Card(props: Props) {
-	const itemVariants = {
-		hidden: { opacity: 0, x: 40 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: { type: 'spring', duration: 1, bounce: 0.5 }
-		},
-	};
+	// const itemVariants = {
+	// 	hidden: { opacity: 0, x: 40 },
+	// 	visible: {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		transition: { type: 'spring', duration: 1, bounce: 0.5 }
+	// 	},
+	// };
 	return (
-		<motion.div variants={itemVariants}>
+		<div>
 			<Link
 				href={props.href}
 				target="_blank"
@@ -54,6 +54,6 @@ export default function Card(props: Props) {
 				</div>
 				<div className="border-card" />
 			</Link>
-		</motion.div>
+		</div>
 	)
 }

@@ -43,6 +43,17 @@ const projects = [
     ]
   },
   {
+    title: 'Gym landing page',
+    description: 'Uma landing page para uma academia fictícia.',
+    href: 'https://gym-landing-page-lime.vercel.app/',
+    img: '/img/gym-landing-page.png',
+    techs: [
+      techInfo.nextdotjs,
+      techInfo.tailwindcss,
+      techInfo.typescript
+    ]
+  },
+  {
     title: 'Color Converter',
     description: 'Um site prático e versátil para converter cores sem esforço.',
     href: 'https://color-converter-one.vercel.app/',

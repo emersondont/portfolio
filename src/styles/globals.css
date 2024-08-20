@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 html {
   scroll-behavior: smooth;
@@ -13,6 +14,7 @@ body {
   color: #E2E8F0;
   font-family: 'Inter', sans-serif;
   background-color: #3b0764;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); /* mobile */
 }
 
 .custom-text-shadow {
@@ -27,7 +29,8 @@ body {
   box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.border-card {
+.border-card,
+.border-modal {
   content: '';
   position: absolute;
   inset: 0;
@@ -39,7 +42,8 @@ body {
   mask-composite: exclude;
 }
 
-.border-card::before {
+.border-card::before,
+.border-modal::before {
   content: '';
   position: absolute;
   width: 220px;
@@ -50,9 +54,15 @@ body {
   offset-distance: 0%;
 }
 
-.border-card:hover {
-  background-color: rgba(88,28,135,0.5);
+.border-card:hover,
+.border-modal:hover {
+  background-color: rgba(88, 28, 135, 0.5);
   transition: all 200ms ease-out;
+}
+
+.border-modal::before {
+  background: radial-gradient(at right center, #c084fc, transparent 60%);
+  animation: moveAlongThePath 3s linear infinite;
 }
 
 .border-card:hover::before {
@@ -133,6 +143,7 @@ body {
     opacity: 0;
     transform: translateY(100%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);

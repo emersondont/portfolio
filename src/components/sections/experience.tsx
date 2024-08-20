@@ -42,31 +42,29 @@ export default function Experience(props: Props) {
 			ref={experienceRef}
 		>
 			{experiences.map((experience, index) => (
-				<div>
-					<Link
-						href={experience.href}
-						target='_blank'
-						key={index}
-						className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
+				<Link
+					href={experience.href}
+					target='_blank'
+					key={index}
+					className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
 				hover:bg-blur z-10 hover:backdrop-blur-lg relative
 						flex-wrap
 						lg:flex-nowrap
 				'
-					>
-						<div className='
+				>
+					<div className='
 						text-xs font-semibold flex items-center gap-1 text-secondary'>
-							<span>{experience.start}</span>
-							<span className='w-4 bg-secondary' style={{ height: '2px' }} />
-							<span>{experience.end}</span>
-						</div>
-						<div>
-							<h2 className='text-base font-medium text-primary'>{experience.company}</h2>
-							<h3 className='text-sm font-medium text-primary mb-2'>{experience.role}</h3>
-							<p className='text-sm text-secondary'>{experience.description}</p>
-						</div>
-						<div className="border-card" />
-					</Link>
-				</div>
+						<span>{experience.start}</span>
+						<span className='w-4 bg-secondary' style={{ height: '2px' }} />
+						<span>{experience.end}</span>
+					</div>
+					<div>
+						<h2 className='text-base font-medium text-primary'>{experience.company}</h2>
+						<h3 className='text-sm font-medium text-primary mb-2'>{experience.role}</h3>
+						<p className='text-sm text-secondary'>{experience.description}</p>
+					</div>
+					<div className="border-card" />
+				</Link>
 			))}
 		</div>
 	)

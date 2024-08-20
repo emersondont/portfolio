@@ -2,58 +2,88 @@ import Image from "next/image"
 import Link from 'next/link'
 import { IconType } from "react-icons"
 import { motion } from 'framer-motion'
+import { useRef } from "react"
+import Modal from "./modal"
+import { SiGithub } from 'react-icons/si';
+import { SlGlobe } from "react-icons/sl";
 
 interface Props {
 	title: string
 	description: string
-	href: string
+	href?: string
+	gitHubHref?: string
 	img: string
 	techs: { icon: IconType, label: string }[]
 }
 
 export default function Card(props: Props) {
-	// const itemVariants = {
-	// 	hidden: { opacity: 0, x: 40 },
-	// 	visible: {
-	// 		opacity: 1,
-	// 		x: 0,
-	// 		transition: { type: 'spring', duration: 1, bounce: 0.5 }
-	// 	},
-	// };
+	const dialogRef = useRef<HTMLDialogElement>(null);
+
+	const toggleDialog = () => {
+		if (!dialogRef.current) return
+		dialogRef.current.hasAttribute('open') ? dialogRef.current.close() : dialogRef.current.showModal()
+	}
+
 	return (
-		<div>
-			<Link
-				href={props.href}
-				target="_blank"
+		<>
+			<div
+				onClick={toggleDialog}
 				className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start relative
-			hover:bg-blur z-10 hover:backdrop-blur-lg
-			md:flex-wrap
-			lg:flex-nowrap
-			'
+			hover:bg-blur z-10 hover:backdrop-blur-lg md:flex-wraplg:flex-nowrap'
 			>
 				<img
 					src={props.img}
 					alt={`Screenshot of website ${props.title}`}
-					className="
-				w-24 h-auto object-contain
-				sm:w-40
-				"
+					className="w-32 h-auto object-containsm:w-40"
 				/>
 				<div className="flex flex-col">
-					<h1 className="text-base font-medium text-primary mb-2">
+					<h1 className="text-lg font-semibold text-primary mb-2">
 						{props.title}
 					</h1>
-					<p className="text-sm text-tertiary">
+					<p className="text-sm text-tertiary line-clamp-2">
 						{props.description}
 					</p>
-					<div className="text-secondary flex gap-3 mt-4 flex-wrap">
+				</div>
+				<div className="border-card" />
+			</div>
+
+			<Modal dialogRef={dialogRef} toggleDialog={toggleDialog}>
+				<img
+					src={props.img}
+					alt={`Screenshot of website ${props.title}`}
+					className="w-full h-auto object-contain rounded-md"
+				/>
+
+				<div className="flex mt-3 items-end justify-between">
+					<h1 className="text-xl font-semibold text-primary mb-2">
+						{props.title}
+					</h1>
+
+					<div className="flex text-secondary z-10">
+						{props.href &&
+							<Link href={props.href} target="_blank" className="p-2 hover:bg-background hover:bg-opacity-80 rounded-full duration-200 ease-in-out">
+								<SlGlobe size={28} title="Website" />
+							</Link>
+						}
+						{props.gitHubHref &&
+							<Link href={props.gitHubHref} target="_blank" className="p-2 hover:bg-background hover:bg-opacity-80 rounded-full duration-200 ease-in-out">
+								<SiGithub size={28} title="Github" />
+							</Link>
+						}
+					</div>
+				</div>
+
+				<p className="text-base text-white text-opacity-80 mt-2 text-justify">
+					{props.description}
+				</p>
+				<div className="flex justify-center">
+					<div className="text-secondary flex gap-3 mt-8 flex-wrap justify-center z-50">
 						{props.techs.map((Tech, index) => (
-							<Tech.icon key={index} size={22} title={Tech.label} />
+							<Tech.icon key={index} size={28} title={Tech.label} />
 						))}
 					</div>
 				</div>
-				<div className="border-card" />
-			</Link>
-		</div>
+			</Modal>
+		</>
 	)
 }

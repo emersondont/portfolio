@@ -3,7 +3,7 @@ import techInfo from '@/utils/techData';
 const projects = [
   {
     title: 'PET Computação',
-    description: 'Reformulação do portal do PET Computação - UFPel',
+    description: 'Reformulação do portal do PET Computação da Universidade Federal de Pelotas(UFPel), incluindo melhorias na interface do usuário com um design moderno.',
     href: 'https://wp.ufpel.edu.br/petcomp/',
     img: '/img/Portal-pet.png',
     techs: [
@@ -15,8 +15,9 @@ const projects = [
   },
   {
     title: 'Wallet',
-    description: 'Projeto Full Stack de uma carteira virtual, hospedado na AWS.',
-    href: 'https://github.com/emersondont/wallet',
+    description: 'Projeto Full Stack de uma carteira virtual, hospedado na AWS. Permite aos usuários gerenciar suas finanças de forma eficiente. Os usuários podem criar uma conta, fazer login e começar a utilizar os recursos disponíveis.',
+    href: 'http://ec2-3-142-194-138.us-east-2.compute.amazonaws.com/',
+    gitHubHref: 'https://github.com/emersondont/wallet',
     img: '/img/Wallet.png',
     techs: [
       techInfo.react,
@@ -30,9 +31,33 @@ const projects = [
     ]
   },
   {
+    title: 'Gym landing page',
+    description: 'Uma landing page desenvolvida para uma academia fictícia, projetada para atrair novos membros e fornecer informações detalhadas sobre os serviços oferecidos.',
+    href: 'https://gym-landing-page-lime.vercel.app/',
+    gitHubHref: 'https://github.com/emersondont/gym-landing-page',
+    img: '/img/gym-landing-page.png',
+    techs: [
+      techInfo.nextdotjs,
+      techInfo.tailwindcss,
+      techInfo.typescript
+    ]
+  },
+  {
+    title: 'Color Converter',
+    description: 'Um site prático e versátil que permite converter cores entre diversos formatos. Com o Color Converter, você pode transformar facilmente uma cor de RGB em HEX e explorar conversões entre outros formatos, como HSL, CMYK e HSV.',
+    href: 'https://color-converter-one.vercel.app/',
+    gitHubHref: 'https://github.com/emersondont/color-converter',
+    img: '/img/Color-converter.png',
+    techs: [
+      techInfo.nextdotjs,
+      techInfo.css,
+      techInfo.typescript
+    ]
+  },
+  {
     title: 'Notes - Listas de Tarefas',
-    description: 'Projeto Full Stack de uma aplicação de listas de tarefas.',
-    href: 'https://github.com/emersondont/notes',
+    description: 'Projeto Full Stack de uma aplicação de listas de tarefas, permitindo aos usuários criar listas de tarefas personalizadas, cada uma com descrição e data associadas.',
+    gitHubHref: 'https://github.com/emersondont/notes',
     img: '/img/Notes.png',
     techs: [
       techInfo.nextdotjs,
@@ -43,72 +68,16 @@ const projects = [
     ]
   },
   {
-    title: 'Gym landing page',
-    description: 'Uma landing page para uma academia fictícia.',
-    href: 'https://gym-landing-page-lime.vercel.app/',
-    img: '/img/gym-landing-page.png',
-    techs: [
-      techInfo.nextdotjs,
-      techInfo.tailwindcss,
-      techInfo.typescript
-    ]
-  },
-  {
-    title: 'Color Converter',
-    description: 'Um site prático e versátil para converter cores sem esforço.',
-    href: 'https://color-converter-one.vercel.app/',
-    img: '/img/Color-converter.png',
-    techs: [
-      techInfo.nextdotjs,
-      techInfo.css,
-      techInfo.typescript
-    ]
-  },
-  // {
-  //   title: 'Minecraft 3D store',
-  //   description: 'Uma loja de objetos 3D',
-  //   href: 'https://minecraft-3d-store.vercel.app/',
-  //   img: '/img/Minecraft-3d-store.png',
-  //   techs: [
-  //     techInfo.webgl,
-  //     techInfo.html,
-  //     techInfo.css,
-  //     techInfo.javascript
-  //   ]
-  // },
-  // {
-  //   title: 'Ray Marching',
-  //   description: 'Minha implementação de Ray Marching.',
-  //   href: 'https://ray-marching-xi.vercel.app/',
-  //   img: '/img/Ray-marching.png',
-  //   techs: [
-  //     techInfo.webgl,
-  //     techInfo.html,
-  //     techInfo.javascript
-  //   ]
-  // },
-  {
     title: 'Portfólio',
-    description: 'Este portfólio, onde falo um pouco sobre mim e listo meus projetos.',
+    description: 'Este portfólio, onde compartilho um pouco sobre minha trajetória, habilidades e experiências. Além disso, apresento uma lista de alguns dos meus projetos, cada um acompanhado de descrições, tecnologias utilizadas e links.',
     href: 'https://emersondont.vercel.app/',
+    gitHubHref: 'https://github.com/emersondont/portfolio',
     img: '/img/Portfolio.png',
     techs: [
       techInfo.nextdotjs,
       techInfo.tailwindcss,
       techInfo.typescript
     ]
-  },
-  // {
-  //   title: 'Império Suplementos',
-  //   description: 'Plataforma para exibir produtos de uma loja de suplementos.',
-  //   href: 'https://imperiosuplementos.vercel.app/',
-  //   img: '/img/Imperio-suplementos.png',
-  //   techs: [
-  //     techInfo.nextdotjs,
-  //     techInfo.tailwindcss,
-  //     techInfo.tailwindcss,
-  //   ]
-  // }
+  }
 ];
-
 export default projects;

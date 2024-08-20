@@ -28,6 +28,7 @@ export default function Projects(props: Props) {
           title={project.title}
           description={project.description}
           href={project.href}
+          gitHubHref={project.gitHubHref}
           img={project.img}
           techs={project.techs}
         />

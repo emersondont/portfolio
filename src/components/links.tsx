@@ -6,6 +6,7 @@ import {
 	SiInstagram
 } from 'react-icons/si';
 import { motion } from 'framer-motion'
+import LinkIcon from './linkIcon';
 
 const links = [
 	{
@@ -57,17 +58,12 @@ export default function Links() {
 				onMouseLeave={() => [setShow(false), setLinkHover('')]}
 			>
 				{links.map((link, index) => (
-					<Link
-						key={index}
+					<LinkIcon
 						href={link.href}
-						target='_blank'
-						className='flex items-center group'
+						icon={link.icon}
+						label={link.label}
 						onMouseEnter={() => setLinkHover(link.spanHref)}
-					>
-						<link.icon className='
-					text-3xl text-secondary group-hover:text-primary ease-in duration-200
-					' />
-					</Link>
+					/>
 				))}
 			</div>
 		</motion.footer>

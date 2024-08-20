@@ -6,6 +6,7 @@ import { useRef } from "react"
 import Modal from "./modal"
 import { SiGithub } from 'react-icons/si';
 import { SlGlobe } from "react-icons/sl";
+import LinkIcon from "./linkIcon"
 
 interface Props {
 	title: string
@@ -54,22 +55,14 @@ export default function Card(props: Props) {
 					className="w-full h-auto object-contain rounded-md"
 				/>
 
-				<div className="flex mt-3 items-end justify-between">
-					<h1 className="text-xl font-semibold text-primary mb-2">
+				<div className="flex mt-3 mb-2 items-end justify-between">
+					<h1 className="text-xl font-semibold text-primary">
 						{props.title}
 					</h1>
 
-					<div className="flex text-secondary z-10">
-						{props.href &&
-							<Link href={props.href} target="_blank" className="p-2 hover:bg-background hover:bg-opacity-80 rounded-full duration-200 ease-in-out">
-								<SlGlobe size={28} title="Website" />
-							</Link>
-						}
-						{props.gitHubHref &&
-							<Link href={props.gitHubHref} target="_blank" className="p-2 hover:bg-background hover:bg-opacity-80 rounded-full duration-200 ease-in-out">
-								<SiGithub size={28} title="Github" />
-							</Link>
-						}
+					<div className="flex items-center text-secondary z-10 gap-2">
+						{props.href && <LinkIcon href={props.href} icon={SlGlobe} label="Website" />}
+						{props.gitHubHref && <LinkIcon href={props.gitHubHref} icon={SiGithub} label="GitHub" />}
 					</div>
 				</div>
 

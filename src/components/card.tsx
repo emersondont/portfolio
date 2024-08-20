@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from 'next/link'
 import { IconType } from "react-icons"
 import { motion } from 'framer-motion'
 import { useRef } from "react"
@@ -32,10 +31,12 @@ export default function Card(props: Props) {
 				className='flex cursor-pointer p-4 rounded-md gap-3 ease-in duration-200 items-start relative
 			hover:bg-blur z-10 hover:backdrop-blur-lg md:flex-wraplg:flex-nowrap'
 			>
-				<img
+				<Image
 					src={props.img}
 					alt={`Screenshot of website ${props.title}`}
-					className="w-32 h-auto object-containsm:w-40"
+					width={144}
+					height={90}
+					objectFit="cover"
 				/>
 				<div className="flex flex-col">
 					<h1 className="text-lg font-semibold text-primary mb-2">
@@ -49,10 +50,13 @@ export default function Card(props: Props) {
 			</div>
 
 			<Modal dialogRef={dialogRef} toggleDialog={toggleDialog}>
-				<img
+				<Image
 					src={props.img}
 					alt={`Screenshot of website ${props.title}`}
-					className="w-full h-auto object-contain rounded-md"
+					width={296}
+					height={185}
+					objectFit="cover"
+					className="rounded-md"
 				/>
 
 				<div className="flex mt-3 mb-2 items-end justify-between">

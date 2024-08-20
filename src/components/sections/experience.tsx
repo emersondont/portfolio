@@ -47,21 +47,17 @@ export default function Experience(props: Props) {
 					target='_blank'
 					key={index}
 					className='flex cursor-pointer p-4 rounded-md gap-4 ease-in duration-200 items-start
-				hover:bg-blur z-10 hover:backdrop-blur-lg relative
-						flex-wrap
-						lg:flex-nowrap
-				'
+				hover:bg-blur z-10 hover:backdrop-blur-lg relative flex-wrap lg:flex-nowrap'
 				>
-					<div className='
-						text-xs font-semibold flex items-center gap-1 text-secondary'>
+					<div className='text-sm font-semibold flex items-center gap-1 text-secondary'>
 						<span>{experience.start}</span>
-						<span className='w-4 bg-secondary' style={{ height: '2px' }} />
+						<span className='w-3 bg-secondary' style={{ height: '2px' }} />
 						<span>{experience.end}</span>
 					</div>
 					<div>
-						<h2 className='text-base font-medium text-primary'>{experience.company}</h2>
-						<h3 className='text-sm font-medium text-primary mb-2'>{experience.role}</h3>
-						<p className='text-sm text-secondary'>{experience.description}</p>
+						<h2 className='text-lg font-semibold text-primary'>{experience.company}</h2>
+						<h3 className='text-base font-medium text-primary mb-2'>{experience.role}</h3>
+						<p className='text-sm text-tertiary'>{experience.description}</p>
 					</div>
 					<div className="border-card" />
 				</Link>

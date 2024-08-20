@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         primary: '#faf5ff',
         secondary: '#a855f7',
-        tertiary: '#c084fc',
+        tertiary: '#CF9CFC',
         background: '#3b0764',
         blur: 'rgba(88,28,135,0.5)'
       }

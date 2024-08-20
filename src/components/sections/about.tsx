@@ -33,6 +33,8 @@ export default function About(props: Props) {
 					como <span className='text-tertiary'>C, C++, Java, Python</span> e até mesmo linguagens de baixo nível
 					como Assembly, busquei também experiência como desenvolvedor frontend, onde obtive um amplo entendimento
 					das tecnologias <span className='text-tertiary'>HTML, CSS</span> e <span className='text-tertiary'>JavaScript</span>.
+				</p>
+				<p>
 					Além disso, estou sempre buscando aprimorar minhas habilidades e me aventurei no mundo do <span className='text-tertiary'>ReactJS</span>,
 					onde adquiri conhecimento prático no desenvolvimento de aplicações frontend modernas.
 				</p>

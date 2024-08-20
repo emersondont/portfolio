@@ -17,6 +17,15 @@ body {
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); /* mobile */
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+dialog[open] {
+  pointer-events: auto;
+}
+
 .custom-text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

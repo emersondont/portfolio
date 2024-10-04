@@ -1,11 +1,8 @@
 import Image from "next/image"
 import { IconType } from "react-icons"
-import { motion } from 'framer-motion'
 import { useRef } from "react"
 import Modal from "./modal"
-import { SiGithub } from 'react-icons/si';
-import { SlGlobe } from "react-icons/sl";
-import LinkIcon from "./linkIcon"
+import ProjectLink from "./projectLink"
 
 interface Props {
 	title: string
@@ -59,14 +56,14 @@ export default function Card(props: Props) {
 					className="rounded-md"
 				/>
 
-				<div className="flex mt-3 mb-2 items-end justify-between">
-					<h1 className="text-xl font-semibold text-primary">
+				<div className="flex mt-3 mb-2 items-end justify-between w-full">
+					<h1 className="text-xl font-semibold text-primary whitespace-nowrap">
 						{props.title}
 					</h1>
 
-					<div className="flex items-center text-secondary z-10 gap-2">
-						{props.href && <LinkIcon href={props.href} icon={SlGlobe} label="Website" />}
-						{props.gitHubHref && <LinkIcon href={props.gitHubHref} icon={SiGithub} label="GitHub" />}
+					<div className="flex items-center text-secondary z-10 gap-2 flex-wrap justify-end">
+						{props.href && <ProjectLink href={props.href} label="Website" />}
+						{props.gitHubHref && <ProjectLink href={props.gitHubHref} label="GitHub" />}
 					</div>
 				</div>
 

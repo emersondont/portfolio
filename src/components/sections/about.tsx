@@ -26,7 +26,7 @@ export default function About(props: Props) {
 			<div className='flex flex-col z-10 text-sm text-primary gap-3 sm:text-base'>
 				<p>
 					Olá! Sou o Emerson, formado em <span className='text-tertiary'>Ciência da Computação</span> pela
-					Universidade Federal de Pelotas (UFPel) e me tornando um <span className='text-tertiary'>Desenvolvedor Full-Stack</span>.
+					Universidade Federal de Pelotas (UFPel) e <span className='text-tertiary'>Desenvolvedor Full-Stack</span>.
 				</p>
 				<p>
 					Durante a minha graduação, além de adquirir experiência com várias linguagens de programação na graduação,

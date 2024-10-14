@@ -31,6 +31,20 @@ const projects = [
     ]
   },
   {
+    title: 'Virtual Bank',
+    description: 'Projeto FullStack de um banco virtual, onde os usuários podem realizar transferências bancárias entre eles, visualizar o extrato de transações e o saldo da conta.',
+    gitHubHref: 'https://github.com/emersondont/virtual-bank',
+    img: '/img/Virtual-Bank.png',
+    techs: [
+      techInfo.springboot,
+      techInfo.postgresql,
+      techInfo.nextdotjs,
+      techInfo.tailwindcss,
+      techInfo.typescript,
+      techInfo.docker,
+    ]
+  },
+  {
     title: 'Gym landing page',
     description: 'Uma landing page desenvolvida para uma academia fictícia, projetada para atrair novos membros e fornecer informações detalhadas sobre os serviços oferecidos.',
     href: 'https://gym-landing-page-lime.vercel.app/',

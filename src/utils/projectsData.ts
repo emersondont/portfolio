@@ -2,6 +2,20 @@ import techInfo from '@/utils/techData';
 
 const projects = [
   {
+    title: 'Virtual Bank',
+    description: 'Projeto FullStack de um banco virtual, onde os usuários podem realizar transferências bancárias entre eles, visualizar o extrato de transações e o saldo da conta.',
+    gitHubHref: 'https://github.com/emersondont/virtual-bank',
+    img: '/img/Virtual-Bank.png',
+    techs: [
+      techInfo.springboot,
+      techInfo.postgresql,
+      techInfo.nextdotjs,
+      techInfo.tailwindcss,
+      techInfo.typescript,
+      techInfo.docker,
+    ]
+  },
+  {
     title: 'PET Computação',
     description: 'Reformulação do portal do PET Computação da Universidade Federal de Pelotas(UFPel), incluindo melhorias na interface do usuário com um design moderno.',
     href: 'https://wp.ufpel.edu.br/petcomp/',
@@ -28,20 +42,6 @@ const projects = [
       techInfo.amazonaws,
       techInfo.docker,
       techInfo.nginx
-    ]
-  },
-  {
-    title: 'Virtual Bank',
-    description: 'Projeto FullStack de um banco virtual, onde os usuários podem realizar transferências bancárias entre eles, visualizar o extrato de transações e o saldo da conta.',
-    gitHubHref: 'https://github.com/emersondont/virtual-bank',
-    img: '/img/Virtual-Bank.png',
-    techs: [
-      techInfo.springboot,
-      techInfo.postgresql,
-      techInfo.nextdotjs,
-      techInfo.tailwindcss,
-      techInfo.typescript,
-      techInfo.docker,
     ]
   },
   {

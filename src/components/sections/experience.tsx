@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion'
+import Image from "next/image"
 
 interface Props {
 	id: string;
@@ -13,6 +14,8 @@ const experiences = [
 		start: 'Nov/2024',
 		end: 'Atual',
 		description: '',
+		logo: '/img/nelogica.png',
+		logoWidth: 20,
 	},
 	{
 		company: 'Noticiato',
@@ -20,6 +23,8 @@ const experiences = [
 		start: 'Set/2024',
 		end: 'Nov/2024',
 		description: 'Atuei no desenvolvimento de aplicações web modernas com foco em interfaces dinâmicas, experiência do usuário e páginas responsivas.',
+		logo: '/img/noticiato.png',
+		logoWidth: 16,
 	},
 	{
 		company: 'UFPEL',
@@ -27,6 +32,8 @@ const experiences = [
 		start: 'Dez/2022',
 		end: 'Mar/2024',
 		description: 'Fiz parte do PET Computação como bolsista, o que me proporcionou inúmeras oportunidades para o meu crescimento pessoal e profissional. Aprimorando minhas habilidades de resolução de problemas, trabalho em equipe e comunicação.',
+		logo: '/img/ufpel.png',
+		logoWidth: 20,
 	}
 ]
 
@@ -67,7 +74,16 @@ export default function Experience(props: Props) {
 					</div>
 					<div>
 						<h2 className='text-lg font-semibold text-primary'>{experience.role}</h2>
-						<h3 className='text-base font-medium text-primary mb-2'>{experience.company}</h3>
+						<div className='flex gap-1 items-center mb-2'>
+							<Image
+								src={experience.logo}
+								alt={experience.company}
+								width={experience.logoWidth}
+								height={experience.logoWidth}
+								className='object-contain'
+							/>
+							<h3 className='text-base font-medium text-primary'>{experience.company}</h3>
+						</div>
 						<p className='text-sm text-tertiary'>{experience.description}</p>
 					</div>
 					<div className="border-card" />

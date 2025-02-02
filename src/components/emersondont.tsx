@@ -27,7 +27,7 @@ export default function Emersondont() {
 				sm:text-base
 				'>
 				CIENTISTA DA COMPUTAÇÃO<br />
-				DESENVOLVEDOR FULL-STACK
+				DESENVOLVEDOR DE SOFTWARE
 			</p>
 		</motion.div>
 	)

@@ -26,7 +26,7 @@ export default function About(props: Props) {
 			<div className='flex flex-col z-10 text-sm text-primary gap-3 sm:text-base'>
 				<p>
 					Olá! Sou o Emerson, formado em <span className='text-tertiary'>Ciência da Computação</span> pela
-					Universidade Federal de Pelotas (UFPel) e <span className='text-tertiary'>Desenvolvedor Full-Stack</span>.
+					Universidade Federal de Pelotas (UFPel) e atualmente atuo como <span className='text-tertiary'>Desenvolvedor De Software</span>.
 				</p>
 				<p>
 					Durante a minha graduação, além de adquirir experiência com várias linguagens de programação na graduação,
@@ -34,12 +34,11 @@ export default function About(props: Props) {
 					 onde obtive um amplo entendimento das tecnologias <span className='text-tertiary'>HTML, CSS</span> e <span className='text-tertiary'>JavaScript</span>.
 				</p>
 				<p>
-					Além disso, estou sempre buscando aprimorar minhas habilidades e me aventurei no mundo do <span className='text-tertiary'>ReactJS</span>,
-					onde adquiri conhecimento prático no desenvolvimento de aplicações frontend modernas.
+					Além disso, estou sempre buscando aprimorar minhas habilidades e me aventurei no mundo do <span className='text-tertiary'>ReactJS, Next.js, TypeScript, Tailwind </span>,
+					onde adquiri conhecimento prático no desenvolvimento de aplicações frontend modernas. E também o <span className='text-tertiary'>Java Spring Boot</span> para projetos backend.
 				</p>
 				<p>
-					Atualmente, estou expandindo meu conjunto de habilidades explorando <span className='text-tertiary'>TypeScript, Tailwind, Next.js </span>
-					e também o <span className='text-tertiary'>Java Spring Boot</span> para projetos backend.
+					Atualmente, atuo com <span className='text-tertiary'>Desenvolvedor De Software</span> na Nelogica.
 				</p>
 				<p>
 					Sinta-se à vontade para explorar meu portfólio e conhecer mais sobre os projetos que realizei!

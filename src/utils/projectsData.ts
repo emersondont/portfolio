@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Wallet',
     description: 'Projeto Full Stack de uma carteira virtual, hospedado na AWS. Permite aos usuários gerenciar suas finanças de forma eficiente. Os usuários podem criar uma conta, fazer login e começar a utilizar os recursos disponíveis.',
-    href: 'http://ec2-3-142-194-138.us-east-2.compute.amazonaws.com/',
+    // href: 'http://ec2-3-142-194-138.us-east-2.compute.amazonaws.com/',
     gitHubHref: 'https://github.com/emersondont/wallet',
     img: '/img/Wallet.png',
     techs: [

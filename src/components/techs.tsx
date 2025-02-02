@@ -7,7 +7,8 @@ import {
   SiReact,
   SiNextdotjs,
   SiSpringboot,
-  SiDocker
+  SiDocker,
+  SiDelphi
 } from 'react-icons/si';
 
 const techs = [
@@ -46,6 +47,10 @@ const techs = [
   {
     title: 'Docker',
     icon: SiDocker
+  },
+  {
+    title: 'Delphi',
+    icon: SiDelphi
   }
 ]
 

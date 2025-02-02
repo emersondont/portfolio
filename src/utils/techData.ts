@@ -12,7 +12,8 @@ import {
   SiPostgresql,
   SiAmazonaws,
   SiDocker,
-  SiNginx
+  SiNginx,
+  SiDelphi
 } from "react-icons/si";
 
 const techInfo = {
@@ -71,6 +72,10 @@ const techInfo = {
   nginx: {
     icon: SiNginx,
     label: 'Nginx'
+  },
+  delphi: {
+    icon: SiDelphi,
+    label: 'Delphi'
   }
 };
 
